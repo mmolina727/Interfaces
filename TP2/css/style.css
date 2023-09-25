@@ -297,3 +297,71 @@
     line-height: normal;
     letter-spacing: 1.54px;
 }
+
+/* PAGINA DEL JUEGO */
+
+.play-content{
+    display: flex;
+    justify-content: center;
+    padding: 62px 0;
+}
+
+.game{
+    background-color: #000;
+    width: 1135px;
+    height: 600px;
+}
+
+.description-game-content{
+    width: 1135px;
+    height: 468px;
+    background-color:#212233;
+    margin: auto;
+}
+
+.font-body{
+    color: #FFF;
+    font-family: Roboto Mono;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.information-game-content{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 33px;
+    border-bottom: 2px solid #FFF;
+    padding: 20px 0;
+}
+
+.information-game button{
+    width: 141px;
+    height: 38px;
+    margin: 15px 0;
+}
+
+.information-img{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    padding-left: 380px;
+}
+
+.color-font{
+    color: #FFF;
+}
+
+.information{
+    width: 400px;
+}
+
+.gameplay-content{
+    margin:0 33px;
+}
+
+.gameplay-content h2{
+    padding-bottom: 20px;
+}
