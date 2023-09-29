@@ -111,10 +111,9 @@
     margin-top: 21px;
     border-radius: 4px;
     box-shadow: 2px 2px 4px 2px #000;
-    transition: all, 300ms;
 }
 
-.card:hover {
+.content-img-card:hover {
     transform: scale(1.1);
 }
 
@@ -122,6 +121,7 @@
     width: 219px;
     height: 144px;
     margin: 18px 15px 15px 16px;
+    transition: all, 300ms;
 }
 
 .img-card {
@@ -150,6 +150,38 @@
     font-weight: 500;
     line-height: normal;
 }
+
+.carousel-section{
+    width: 1027px;
+    height: 400px;
+}
+
+.carousel{
+    overflow-x: scroll;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+}
+
+.carousel-card{
+    scroll-snap-align: start;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.carousel::-webkit-scrollbar{
+    background-color: #1C1F3A;
+    border: 2px;
+    border-radius: 50px;
+    height: 10px;
+}
+
+.carousel::-webkit-scrollbar-thumb{
+    background:#373952;
+    border-radius: 50px;
+}
+
+
 
 /* FOOTER STYLE */
 
