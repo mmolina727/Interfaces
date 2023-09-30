@@ -17,11 +17,50 @@
 .left-navbar {
     align-items: center;
     display: flex;
+    position:relative;
 }
 
 .burger-img {
+    cursor: pointer;
     margin-right: 40px;
     margin-left: 20px;
+}
+
+.hidden{
+    display:none;
+}
+
+.nav-burger{
+    width: 250px;
+    height: 510px;
+    background-color: #1C1F3A;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+}
+
+.nav-burger li{
+    color:#FFF;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.07px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    list-style: none;
+}
+
+.main-nav-burger{
+    padding-top: 32px;
+    padding-bottom: 15px;
+    width: auto;
+    border-bottom:1px solid #373952;
+}
+
+.second-main-burger{
+    padding-top: 16px;
 }
 
 .center-navbar {
