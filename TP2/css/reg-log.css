@@ -1,15 +1,17 @@
-*:root {
-    --acento: linear-gradient(180deg, #F51F1F 0%, #FF00B8 100%);
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,100&family=Roboto:ital,wght@0,300;1,400&display=swap');
+/*fuente
+font-family: 'Roboto', sans-serif;
+font-family: 'Lato', sans-serif;*/
 
 /*=============Página Registro=============*/
 
 body.register_page {
     background-color: #373952;
     font-family: 'Roboto', sans-serif;
-    color: #fff; /* Cambiar el color del texto para que sea legible en el fondo */
-    
+    color: #fff;
+    /* Cambiar el color del texto para que sea legible en el fondo */
 }
+
 img.logo {
     margin-left: 20px;
     margin-top: 20px;
@@ -19,15 +21,14 @@ h1,h3 {
     margin: 0;
     padding: 0;
     text-align: center;
-    font-family: 'Roboto';
 }
 
-h1{
+h1 {
     margin-top: -90px;
     font-size: 45px;
 }
 
-h3{
+h3 {
     font-size: 30px;
     color: #10EE4E;
     margin-bottom: 10px;
@@ -35,15 +36,15 @@ h3{
 
 /* Estilos para el contenedor principal */
 .form-container {
-    width: 500px; /* Ancho de la caja */
+    width: 500px;  /* Ancho de la caja */
     background-color: #1C1F3A;
-    border-radius: 10px; /* Agregar bordes redondeados */
+    border-radius: 10px;  /* Agregar bordes redondeados */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    margin: 0 auto; /* Centrar horizontalmente */
+    margin: 0 auto;  /* Centrar horizontalmente */
     border: solid 1px;
     justify-content: center;
 }
@@ -59,12 +60,8 @@ label span {
 }
 
 input {
-    width:330px;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #373952;
-    border-radius: 10px;
-    background-color: #373952;
 }
 
 /*Estilos para el reCaptcha*/
@@ -73,15 +70,15 @@ input {
     align-items: center;
     justify-content: space-around;
     background-color: #D9D9D9;
-    margin-top: 20px;   
-    height: 70px; 
-    border-radius: 5px;      
+    margin-top: 20px;
+    height: 70px;
+    border-radius: 5px;
 }
 
 .tx-small {
     margin-left: 10px;
     size: smaller;
-    color: black;    
+    color: black;
 }
 
 .robot .check {
@@ -89,13 +86,12 @@ input {
     display: flex;
     justify-content: left;
     align-items: center;
-}  
+}
 
 /* Ajusta el tamaño del checkbox */
 .check input[type="checkbox"] {
     transform: scale(1.5); /* Cambia el valor para ajustar el tamaño del checkbox */
     margin-right: 5px; /* Espacio entre el checkbox y el texto */
-    
     width: 15px;
 }
 
@@ -106,15 +102,15 @@ input {
     height: 45px;
     border-radius: 10px;
     font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 1.54px;    
+    letter-spacing: 1.54px;
+    font-family: 'Lato', sans-serif;
+    border: #5335CC;
 }
 
 .form-container .btn_form {
     margin-top: 40px;
 }
+
 .register {
     width: 300px;
     margin-top: 40px;
@@ -126,14 +122,45 @@ input {
 
 /*=============Página Login=============*/
 
-img.logo-login{
-    display: flex;
-    justify-content: center;
+
+
+h3.txt-login {
+    color: #fff
 }
 
-a#tx-ancor{
+.text-button {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1.54px;
+}
+
+div.linea p.tx-small {
+    color: #fff;
+}
+
+a#tx-ancor {
     margin-left: 5px;
-    size: smaller;  
-    color: var(--acento);
+    size: smaller;
 }
 
+.btn-redes-login {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-dark {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+input, .btn-dark {
+    width: 330px;
+    background-color: #373952;
+    border: 1px solid #373952;
+    border-radius: 10px;
+}
