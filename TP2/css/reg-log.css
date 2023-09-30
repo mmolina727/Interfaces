@@ -1,4 +1,8 @@
-/*=============Páginas Registro=============*/
+*:root {
+    --acento: linear-gradient(180deg, #F51F1F 0%, #FF00B8 100%);
+}
+
+/*=============Página Registro=============*/
 
 body.register_page {
     background-color: #373952;
@@ -77,8 +81,7 @@ input {
 .tx-small {
     margin-left: 10px;
     size: smaller;
-    color: black;
-    
+    color: black;    
 }
 
 .robot .check {
@@ -120,3 +123,17 @@ input {
     place-content: center;
     align-items: center;
 }
+
+/*=============Página Login=============*/
+
+img.logo-login{
+    display: flex;
+    justify-content: center;
+}
+
+a#tx-ancor{
+    margin-left: 5px;
+    size: smaller;  
+    color: var(--acento);
+}
+
