@@ -76,7 +76,7 @@ input {
     justify-content: space-around;
     background-color: #D9D9D9;
     margin-top: 20px;
-    height: 70px;
+    height: 65px;
     border-radius: 5px;
 }
 
@@ -112,6 +112,11 @@ input {
     border: #5335CC;
 }
 
+button.btn_form a{
+    color: #fff;
+    text-decoration: none;
+}
+
 .form-container .btn_form {
     margin-top: 40px;
 }
@@ -119,10 +124,9 @@ input {
 .register {
     width: 300px;
     margin-top: 40px;
-    margin-bottom: 20px;
     display: flex;
     place-content: center;
-    align-items: center;
+    align-items: center;   
 }
 
 /*=============Página Login=============*/
@@ -140,11 +144,12 @@ h3.txt-login {
     color: #fff
 }
 
-.text-button {
+.text-button p{
     font-family: 'Roboto', sans-serif;
     color: #fff;
     font-size: 16px;
     letter-spacing: 1.54px;
+    
 }
 
 div.linea p.tx-small {
@@ -182,3 +187,4 @@ input, .btn-dark {
     border: 1px solid #373952;
     border-radius: 10px;
 }
+
