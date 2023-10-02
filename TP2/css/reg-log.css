@@ -57,6 +57,7 @@ label {
     display: block;
     margin-bottom: 5px;
     font-size: 14px;
+    
 }
 
 label span {
@@ -102,7 +103,7 @@ input {
 .btn_form {
     background-color: #5335CC;
     color: #fff;
-    width: 350px;
+    width: 330px;
     height: 45px;
     border-radius: 10px;
     font-size: 20px;
@@ -126,7 +127,14 @@ input {
 
 /*=============Página Login=============*/
 
+.logo-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
+}
 
 h3.txt-login {
     color: #fff
@@ -141,6 +149,7 @@ h3.txt-login {
 
 div.linea p.tx-small {
     color: #fff;
+    margin-bottom: 15px;
 }
 
 a#tx-ancor {
@@ -162,8 +171,13 @@ a#tx-ancor {
     align-items: center;
 }
 
+.logo-button{
+    margin-left: -35px;
+}
+
 input, .btn-dark {
     width: 330px;
+    height: 40px;
     background-color: #373952;
     border: 1px solid #373952;
     border-radius: 10px;
