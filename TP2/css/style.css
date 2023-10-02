@@ -433,15 +433,33 @@
 /* PAGINA DEL JUEGO */
 
 .play-content {
+    margin-left: 30px;
+    padding: 10px 0 30px 0;
+    padding-top: 70px;
+}
+
+.content-game{
     display: flex;
-    justify-content: center;
-    padding: 62px 0;
+    flex-direction: row;
+}
+
+.play-content aside{
+    margin-left: 15px;
+    width: 20%;
 }
 
 .game {
     background-color: #000;
-    width: 1135px;
+    width: 1000px;
     height: 600px;
+}
+
+.breadcrumb{
+    margin-bottom: 3px;
+    color:#5335CC;
+    text-decoration: underline;
+    text-transform: uppercase;
+    cursor:pointer;
 }
 
 .description-game-content {
@@ -469,9 +487,23 @@
 }
 
 .information-game button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 141px;
     height: 38px;
     margin: 15px 0;
+    border-radius: 15px;
+    border: 1px solid #000;
+    background-color: #878A;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.54px;
+    color:#FFF;
 }
 
 .information-img {
