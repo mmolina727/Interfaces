@@ -45,7 +45,6 @@ font-family: 'Lato', sans-serif;*/
 
 .nav-burger{
     width: 250px;
-    /* height: 510px; */
     background-color: #1C1F3A;
     position: absolute;
     top: 100%;
@@ -159,7 +158,7 @@ font-family: 'Lato', sans-serif;*/
     background-color: #141520;
     height: auto;
     width: 100%;
-    padding-bottom: 42px;
+    padding-bottom: 50px;
 }
 
 .game-content {
@@ -305,7 +304,7 @@ font-family: 'Lato', sans-serif;*/
 
 .footer-info {
     display: flex;
-    width: 218px;
+    width: 15%;
     height: auto;
     flex-direction: column;
     flex-shrink: 0;
@@ -393,6 +392,7 @@ font-family: 'Lato', sans-serif;*/
 .subscription-footer button {
     width: 150px;
     height: 51px;
+    padding: 0 10px;
     border-radius: 5px;
     background-color: #FFF;
     color: #212233;
@@ -406,6 +406,7 @@ font-family: 'Lato', sans-serif;*/
 
 .social-footer {
     padding-top: 22px;
+    width: 100%;
 }
 
 .footer-info p {
@@ -417,11 +418,16 @@ font-family: 'Lato', sans-serif;*/
     padding-top: 14px;
 }
 
+.content-social{
+    width: 250px;
+}
+
 .copyright {
     width: 100%;
     display: flex;
     justify-content: center;
     padding-top: 55px;
+    background-color: #1C1F3A;
 }
 
 .copyright p {
@@ -438,7 +444,7 @@ font-family: 'Lato', sans-serif;*/
 
 .play-content {
     margin-left: 30px;
-    padding: 10px 0 30px 0;
+    padding: 10px 0 0px 0;
     padding-top: 70px;
 }
 
@@ -448,13 +454,18 @@ font-family: 'Lato', sans-serif;*/
 }
 
 .play-content aside{
-    margin-left: 15px;
+    margin-left: 45px;
     width: 20%;
+}
+
+.play-content aside img{
+    width: 100%;
+    height: 80%;
 }
 
 .game {
     background-color: #000;
-    width: 1000px;
+    width: 70%;
     height: 600px;
 }
 
@@ -467,10 +478,10 @@ font-family: 'Lato', sans-serif;*/
 }
 
 .description-game-content {
-    width: 1135px;
+    width: 69%;
     height: 468px;
     background-color: #212233;
-    margin: auto;
+    margin-left: 30px;
 }
 
 .font-body {
@@ -485,7 +496,7 @@ font-family: 'Lato', sans-serif;*/
 .information-game-content {
     display: flex;
     flex-direction: row;
-    margin: 20px 33px;
+    margin: 10px 33px;
     border-bottom: 2px solid #FFF;
     padding: 20px 0;
 }
@@ -513,9 +524,9 @@ font-family: 'Lato', sans-serif;*/
 .information-img {
     display: flex;
     flex-direction: column;
-    width: auto;
+    align-items: flex-end;
+    width: 65%;
     height: auto;
-    padding-left: 380px;
 }
 
 .color-font {
@@ -526,6 +537,23 @@ font-family: 'Lato', sans-serif;*/
     width: 400px;
 }
 
+.description-section{
+    display: flex;
+    flex-direction: row;
+}
+
+.banner-img{
+    width: 20%;
+    height: 450px;
+}
+
+.banner-img img{
+    width: 100%;
+    height: 100%;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
 .gameplay-content {
     margin: 0 33px;
 }
@@ -534,11 +562,16 @@ font-family: 'Lato', sans-serif;*/
     padding-bottom: 20px;
 }
 
+.comunity-section{
+    display: flex;
+    flex-direction: row;
+}
+
 .comunity-content {
-    width: 1135px;
+    width: 69%;
     height: 585px;
     background-color: #212233;
-    margin: auto;
+    margin-left: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -547,7 +580,7 @@ font-family: 'Lato', sans-serif;*/
 }
 
 .write-comment-content {
-    width: 780px;
+    width: 79%;
     height: 60px;
     display: flex;
     flex-direction: row;
@@ -587,7 +620,7 @@ font-family: 'Lato', sans-serif;*/
 }
 
 .comment-content {
-    width: 780px;
+    width: 81%;
     height: 123px;
     border: 2px solid #878A9E;
     background: #141520;
@@ -627,6 +660,18 @@ font-family: 'Lato', sans-serif;*/
     width: 80%;
     overflow-wrap: break-word;
     word-wrap: break-word;
+}
+
+.comunity-banner{
+    width: 20%;
+    height: 585px;
+}
+
+.comunity-banner img{
+    width: 100%;
+    height: 100%;
+    margin-left: 45px;
+    margin-top: 65px;
 }
 
 
