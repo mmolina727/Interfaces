@@ -49,7 +49,7 @@ font-family: 'Lato', sans-serif;*/
     position: absolute;
     top: 100%;
     z-index: 1;
-    transition: 0.2s;
+    transition: 0.4s;
 }
 
 .nav-burger li{
@@ -113,7 +113,7 @@ font-family: 'Lato', sans-serif;*/
     top: 100%;
     right: 0%;
     z-index: 1;
-    transition: 0.2s;
+    transition: 0.4s;
 }
 
 .container-img{
@@ -179,11 +179,14 @@ font-family: 'Lato', sans-serif;*/
     height: 59.954px;
     transform: rotate(-14.031deg);
     flex-shrink: 0;
-    border-radius: 1px;
-    border-color: black;
+    border-radius: 5px;    
+    border: #000;
     background-image: linear-gradient(180deg, #F51F1F 0%, #FF00B8 100%);
     margin-left: 300px;
     margin-top: 200px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .section-card {
@@ -486,7 +489,6 @@ font-family: 'Lato', sans-serif;*/
 
 .font-body {
     color: #FFF;
-    font-family: Roboto Mono;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
