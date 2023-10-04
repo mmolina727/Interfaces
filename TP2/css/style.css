@@ -374,7 +374,7 @@ font-family: 'Lato', sans-serif;*/
 }
 
 .footer-info div p {
-    font-family: Roboto Mono;
+    font-family: Roboto, ;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -423,7 +423,7 @@ font-family: 'Lato', sans-serif;*/
 
 .subscription::placeholder {
     color: #FFF;
-    font-family: Roboto Mono;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -483,7 +483,7 @@ font-family: 'Lato', sans-serif;*/
 
 .copyright p {
     color: #FFF;
-    font-family: Lato;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -522,10 +522,13 @@ font-family: 'Lato', sans-serif;*/
 
 .breadcrumb{
     margin-bottom: 3px;
-    color:#5335CC;
-    text-decoration: underline;
+    color:#FFF;
     text-transform: uppercase;
     cursor:pointer;
+}
+
+.share{
+    cursor: pointer;
 }
 
 .description-game-content {
