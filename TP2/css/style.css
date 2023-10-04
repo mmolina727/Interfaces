@@ -12,6 +12,10 @@ font-family: 'Lato', sans-serif;*/
     transform: translateY(-200%);
 }
 
+.opacity{
+    opacity:0.4;
+}
+
 /* NAVBAR STYLE */
 
 .navbar-content {
@@ -253,6 +257,41 @@ font-family: 'Lato', sans-serif;*/
     line-height: normal;
 }
 
+.content-play{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    margin-left: 67px;
+}
+
+.content-play button{
+    width: 25%;
+    height: 35px;
+    background-color: #151B4B;
+    border-radius: 12px;
+    border: solid 1px #000;
+    margin: auto;
+    cursor: pointer;
+}
+
+.content-play .btn-buy{
+    margin-left: 13px;
+}
+
+.content-play span{
+    color:#1E028F;
+    text-align: center;
+    text-shadow: 4px 4px 8px #9A85F1;
+    font-family: Open Sans;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 5px;
+    margin-left: 50px;
+
+}
+
 .carousel-section{
     width: 1027px;
     height: 400px;
@@ -396,12 +435,21 @@ font-family: 'Lato', sans-serif;*/
     border-radius: 5px;
     background-color: #FFF;
     color: #212233;
+    border-color: #212233;
     font-family: Lato;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 3.5px;
+    cursor: pointer;
+    transition: all, 0.7s;
+}
+
+.subscription-footer button:hover {
+    background-color:#5335CC;
+    color:#FFF;
+    border-color: #FFF;
 }
 
 .social-footer {
