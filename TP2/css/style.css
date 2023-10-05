@@ -30,6 +30,7 @@ font-family: 'Lato', sans-serif;*/
 }
 
 .left-navbar {
+    width: 15%;
     align-items: center;
     display: flex;
     position:relative;
@@ -86,6 +87,7 @@ font-family: 'Lato', sans-serif;*/
 }
 
 .center-navbar {
+    width: 31%;
     align-items: center;
     display: flex;
 }
@@ -102,6 +104,7 @@ font-family: 'Lato', sans-serif;*/
 }
 
 .right-navbar {
+    width: 11%;
     align-items: center;
     display: flex;
     position:relative;
@@ -166,6 +169,7 @@ font-family: 'Lato', sans-serif;*/
 }
 
 .game-content {
+    width: 100%;
     padding-top: 120px;
     display: flex;
     justify-content: center;
@@ -296,7 +300,7 @@ font-family: 'Lato', sans-serif;*/
 }
 
 .carousel-section{
-    width: 1027px;
+    width: 75%;
     height: 400px;
 }
 
@@ -727,4 +731,131 @@ font-family: 'Lato', sans-serif;*/
     margin-top: 65px;
 }
 
+@media (max-width: 700px){
 
+    .left-navbar{
+        width: 25%;
+    }
+
+    .burger-img{
+        margin-right: 15px;
+        margin-left: 10px;
+    }
+
+    .center-navbar{
+        width: 30%;
+    }
+
+    .serch-content{
+        width: 100%;
+    }
+
+    .lens-img{
+        margin-left: 75%;
+    }
+
+    .right-navbar{
+        width: 18%;
+    }
+
+    .img-right-navbar{
+        display: flex;
+        align-items: center;
+    }
+
+    .user-img{
+        margin-left: 18px;
+    }
+
+    .nav-burger{
+        width: 190px;
+    }
+
+    .profile-main{
+        width: 190px;
+    }
+
+    .game-content{
+        width: 100%;
+    }
+
+    .game-content .game-frame img{
+        width: 80%;
+        margin: auto;
+    }
+
+    .play {
+        position: absolute;
+        width: 95px;
+        height: 39.954px;
+        margin-left: 200px;
+        margin-top: 100px;
+        font-size: 25px;
+    }
+    
+    .section-card{
+        padding-left: 20%;
+        padding-top: 40px;
+    }
+
+    .content-card{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carousel-section{
+        width: 72%;
+    }
+
+    .footer-content{
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-info{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .social-footer p{
+        width: auto;
+    }
+
+    .footer-info:nth-child(4){
+        padding-top: 10px;
+        padding-left: 53px;
+    }
+
+    .footer{
+        height: auto;
+    }
+
+    .footer-info ul,
+    .footer-info p {
+    font-size: 16px;
+    width: auto;
+    }
+
+    .footer-info div p {
+        font-size: 14px;
+    }
+
+    .subscription::placeholder {
+        font-size: 14px;
+    }
+
+    .subscription-footer button {
+        font-size: 12px;
+    }
+
+    .copyright{
+        padding-top: 30px;
+    }
+
+    .copyright p {
+        font-size: 12px;
+    }
+
+}
