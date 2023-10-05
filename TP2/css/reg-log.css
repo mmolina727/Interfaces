@@ -53,18 +53,18 @@ h3 {
     justify-content: center;
 }
 
-label {
+.label {
     display: block;
     margin-bottom: 5px;
     font-size: 14px;
     
 }
 
-label span {
+.label span {
     color: red;
 }
 
-input {
+.input-form {
     padding: 10px;
     margin-bottom: 20px;
 }
@@ -94,10 +94,11 @@ input {
 }
 
 /* Ajusta el tamaño del checkbox */
-.check input[type="checkbox"] {
+.check .input-check[type="checkbox"] {
     transform: scale(1.5); /* Cambia el valor para ajustar el tamaño del checkbox */
     margin-right: 5px; /* Espacio entre el checkbox y el texto */
     width: 15px;
+    
 }
 
 .btn_form {
@@ -118,7 +119,7 @@ button.btn_form a{
 }
 
 .form-container .btn_form {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .register {
@@ -154,18 +155,22 @@ h3.txt-login {
 
 div.linea p.tx-small {
     color: #fff;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 a#tx-ancor {
     margin-left: 5px;
     size: smaller;
+    background: linear-gradient(180deg, #F51F1F 0%, #FF00B8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .btn-redes-login {
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -180,7 +185,7 @@ a#tx-ancor {
     margin-left: -35px;
 }
 
-input, .btn-dark {
+.input-form, .btn-dark {
     width: 330px;
     height: 40px;
     background-color: #373952;

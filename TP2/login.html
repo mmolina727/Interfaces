@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +14,9 @@
             <img src="./img/logo-reg.png" alt="logo">
         </div>
     </header>
-    
+
     <section class="form-container">
-        <h3 class="txt-login">Iniciá Sesión</h3>
+        <!-- <h3 class="txt-login">Iniciá Sesión</h3> -->
 
         <div class="btn-redes-login">
             <button class="btn-dark">
@@ -23,7 +24,7 @@
                     <img src="./img/icon g-google.png" alt="google">
                 </div>
                 <div class="text-button">
-                    <p>Iniciar con Google</p> 
+                    <p>Iniciar con Google</p>
                 </div>
             </button>
             <button class="btn-dark">
@@ -37,11 +38,20 @@
         </div>
 
         <div class="linea">
-            <p class="tx-small">OR</p>
+            <p class="tx-small">O</p>
         </div>
 
-        
-        <div class="campo">
+
+        <div class="form_block">
+            <form class="user_load" id="form_register">
+                <label class="label" for="fname">Correo Electrónico <span>*</span></label>
+                <input class="input-form" type="text" name="" value="" id="fname" required>
+                <label class="label" for="lname">Contraseña <span>*</span></label>
+                <input class="input-form" type="text" name="" value="" id="lname" required>
+            </form>
+        </div>
+
+        <!-- <div class="campo">
             <label for="email">Correo Electrónico </label>
             <div>
                 <input type="mail" name="mail" id="mail" required>
@@ -53,15 +63,16 @@
             <div>
                 <input type="password" name="" id="pass" required>
             </div>
-        </div>
+        </div> -->
 
         <button class="btn_form" type="submit" id="btnAdd"><a href="index.html">Iniciar Sesión</a></button>
 
         <span class="register">
-            ¿Todavia sin cuenta? 
+            ¿Todavia sin cuenta?
             <a href="registro.html" id="tx-ancor">Registrate ahora</a>
         </span>
 
     </section>
 </body>
+
 </html>
