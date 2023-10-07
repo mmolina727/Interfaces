@@ -172,7 +172,7 @@ font-family: 'Lato', sans-serif;*/
     width: 100%;
     padding-top: 120px;
     display: flex;
-    justify-content: center;
+    padding-left: 15%;
     position: relative;
 }
 
@@ -231,6 +231,31 @@ font-family: 'Lato', sans-serif;*/
     transform: scale(1.1);
 }
 
+.card-free{
+    position: relative;
+}
+
+.card-free svg{
+    position: absolute;
+    top:12%;
+    right:0;
+}
+
+.tag-free{
+    width: auto;
+    background-color: rgba(16, 238, 78, 0.72);
+    position:absolute;
+    padding:0 10px;
+    top:0%;
+    right:0%;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.54px;
+}
+
 .content-img-card {
     width: 219px;
     height: 144px;
@@ -266,14 +291,14 @@ font-family: 'Lato', sans-serif;*/
 }
 
 .content-play{
-    width: 100%;
+    width: 80%;
     height: 35px;
     display: flex;
-    margin-left: 67px;
+    margin-left: 40px;
 }
 
 .content-play button{
-    width: 25%;
+    width: 30%;
     height: 35px;
     background-color: #151B4B;
     border-radius: 12px;
@@ -282,9 +307,10 @@ font-family: 'Lato', sans-serif;*/
     cursor: pointer;
 }
 
-.content-play .btn-buy{
-    margin-left: 1px;
+.content-play .free{
+    margin-left: 115px;
 }
+
 
 .content-play span{
     color:#1E028F;
@@ -297,7 +323,7 @@ font-family: 'Lato', sans-serif;*/
     line-height: normal;
     margin-top: 5px;
     margin-left: 50px;
-
+    margin-right: 10px;
 }
 
 .carousel-section{
@@ -372,6 +398,7 @@ font-family: 'Lato', sans-serif;*/
 
 .footer-info:nth-child(4) {
     padding-left: 90px;
+    width: 20%;
 }
 
 .footer-info p {
@@ -475,7 +502,7 @@ font-family: 'Lato', sans-serif;*/
 }
 
 .content-social{
-    width: 250px;
+    width: 280px;
 }
 
 .copyright {
@@ -537,10 +564,11 @@ font-family: 'Lato', sans-serif;*/
 }
 
 .description-game-content {
-    width: 69%;
+    width: 68.5%;
     height: 468px;
     background-color: #212233;
     margin-left: 30px;
+    margin-top: 35px;
 }
 
 .font-body {
@@ -626,7 +654,7 @@ font-family: 'Lato', sans-serif;*/
 }
 
 .comunity-content {
-    width: 69%;
+    width: 68.5%;
     height: 585px;
     background-color: #212233;
     margin-left: 30px;
@@ -777,11 +805,13 @@ font-family: 'Lato', sans-serif;*/
     }
 
     .game-content{
-        width: 100%;
+        width: 80%;
+        padding-left: 60px;
     }
 
+
     .game-content .game-frame img{
-        width: 80%;
+        width: 100%;
         margin: auto;
     }
 
