@@ -39,10 +39,13 @@ const validateForm=()=>{
 btn.addEventListener("click",(e)=>{
     if(validateForm()){
         e.preventDefault();
+        msj.innerHTML = '&#10003; Registro exitoso.';
+        msj.style.color = "green";
         loading();
     }
     else{
         e.preventDefault();
-        msj.innerHTML= "Registro invalido.Por favor,complete los campos requeridos";
+        msj.innerHTML= "Registro invalido. Por favor,complete los campos";
+        msj.style.color = "red";
     }
 });

@@ -56,8 +56,7 @@ h3 {
 .label {
     display: block;
     margin-bottom: 5px;
-    font-size: 16px;
-    
+    font-size: 16px;    
 }
 
 .label span {
@@ -140,7 +139,6 @@ button.btn_form a{
     align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
-
 }
 
 h3.txt-login {
@@ -151,13 +149,32 @@ h3.txt-login {
     font-family: 'Roboto', sans-serif;
     color: #fff;
     font-size: 16px;
-    letter-spacing: 1.54px;
-    
+    letter-spacing: 1.54px;    
 }
 
 div.linea p.tx-small {
     color: #fff;
     margin-bottom: 30px;
+}
+
+.linea-efecto {
+    display: inline-block;
+    position: relative;
+}
+
+p.linea-efecto::after, p.linea-efecto::before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 2px;
+    background-color: #fff;
+    top: 0.6em;
+}
+p.linea-efecto::before{
+    left: -160px;
+}
+p.linea-efecto::after{
+    right: -160px;
 }
 
 a#tx-ancor {
@@ -194,4 +211,15 @@ a#tx-ancor {
     border: 1px solid #373952;
     border-radius: 10px;
 }
+.user_log{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
 
+.user_log .labelog{
+    margin-bottom: 5px;
+    font-size: 16px;        
+}
+/*******************************************/
