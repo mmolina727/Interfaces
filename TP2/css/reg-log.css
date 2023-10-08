@@ -236,6 +236,7 @@ a#tx-ancor {
     margin: auto;    
     transition: all 0.2s ease;
     cursor: pointer;
+    margin-top: 10px;
   }
   
   .btn:before {
