@@ -13,7 +13,6 @@ body.register_page {
     background-color: #373952;
     font-family: 'Roboto', sans-serif;
     color: #fff;
-    /* Cambiar el color del texto para que sea legible en el fondo */
 }
 
 img.logo {
@@ -38,17 +37,16 @@ h3 {
     margin-bottom: 20px;
 }
 
-/* Estilos para el contenedor principal */
 .form-container {
-    width: 500px;  /* Ancho de la caja */
+    width: 500px;
     background-color: #1C1F3A;
-    border-radius: 10px;  /* Agregar bordes redondeados */
+    border-radius: 10px; 
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    margin: 0 auto;  /* Centrar horizontalmente */
+    margin: 0 auto;
     border: solid 1px;
     justify-content: center;
 }
@@ -96,9 +94,8 @@ h3 {
 /* Ajusta el tamaño del checkbox */
 .check .input-check[type="checkbox"] {
     transform: scale(1.5); /* Cambia el valor para ajustar el tamaño del checkbox */
-    margin-right: 5px; /* Espacio entre el checkbox y el texto */
-    width: 15px;
-    
+    margin-right: 5px; 
+    width: 15px;    
 }
 
 .btn_form {
@@ -106,9 +103,9 @@ h3 {
     color: #fff;
     width: 330px;
     height: 45px;
-    border-radius: 10px;
+    border-radius: 15px;
     font-size: 20px;
-    letter-spacing: 1.54px;
+    letter-spacing: 4px;
     font-family: 'Lato', sans-serif;
     border: #5335CC;
     cursor: pointer;
@@ -144,15 +141,37 @@ button.btn_form a{
 h3.txt-login {
     color: #fff
 }
-
-.text-button p{
-    font-family: 'Roboto', sans-serif;
-    color: #fff;
-    font-size: 16px;
-    letter-spacing: 1.54px;    
+.btn-redes-login {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-div.linea p.tx-small {
+.btn-dark {
+    margin-bottom: 15px;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    cursor: pointer;
+}
+.logo-button{    
+    margin-right: 10px;
+    margin-left: 20px;
+}
+.logo-button1{    
+    margin-right: 10px;
+    margin-left: 18px;
+    margin-top: 5px;
+}
+.text-button p{
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1.54px;   
+    margin-left: 50px;       
+}
+
+div.linea p.txt-small {
     color: #fff;
     margin-bottom: 30px;
 }
@@ -165,7 +184,7 @@ div.linea p.tx-small {
 p.linea-efecto::after, p.linea-efecto::before{
     content: '';
     position: absolute;
-    width: 150px;
+    width: 140px;
     height: 2px;
     background-color: #fff;
     top: 0.6em;
@@ -177,40 +196,6 @@ p.linea-efecto::after{
     right: -160px;
 }
 
-a#tx-ancor {
-    margin-left: 5px;
-    size: smaller;
-    background: linear-gradient(180deg, #F51F1F 0%, #FF00B8 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.btn-redes-login {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.btn-dark {
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.logo-button{
-    margin-left: -35px;
-}
-
-.input-form, .btn-dark {
-    width: 330px;
-    height: 40px;
-    background-color: #373952;
-    border: 1px solid #373952;
-    border-radius: 10px;
-}
 .user_log{
     display: flex;
     align-items: left;
@@ -222,4 +207,85 @@ a#tx-ancor {
     margin-bottom: 5px;
     font-size: 16px;        
 }
-/*******************************************/
+
+.input-form, .btn-dark {
+    width: 330px;
+    height: 40px;
+    background-color: #373952;
+    border: 1px solid #373952;
+    border-radius: 10px;
+}
+
+a#tx-ancor {
+    margin-left: 5px;
+    size: smaller;
+    background: linear-gradient(180deg, #F51F1F 0%, #FF00B8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*=================== Boton animado ===================*/
+.btn {
+    background-color: transparent;
+    border-radius:15px;
+    border:transparent;
+    width: 330px;
+    height: 45px;    
+    position: relative;
+    margin: auto;    
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 15px;
+    background-color: #5335CC;
+    width: 56px;
+    height: 45px;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  button.btn a {
+    color:#fff;
+    text-decoration:none;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    /* line-height: 18px; */
+    letter-spacing: 4px;
+    /* text-transform: uppercase; */
+    /* vertical-align: middle; */
+  }
+  
+  button.btn svg {
+    margin-bottom: 4px;
+    top: 0;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #fff ;
+    stroke-width: 2;
+    transform: translateX(-40px);
+    transition: all 0.3s ease;
+    margin-right:15px;
+  }
+  
+  .btn:hover:before {
+    width: 100%;
+    background-color: #5335CC;
+  }
+  
+  .btn:hover svg {
+    transform: translateX(0);
+  }
+  
+  .btn:active {
+    transform: scale(0.96);
+  }
