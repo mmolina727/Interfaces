@@ -23,7 +23,7 @@ btnBuy.forEach(function(boton) {
                 img.src='./img/ei_check.png';
             }
             if(!tarjeta.classList.contains('opacity')){
-                img.src='./img/raphael_cart.png';
+                img.src='./img/raphael_cart.png'
             }
     });
 });
