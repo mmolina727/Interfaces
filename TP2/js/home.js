@@ -5,6 +5,7 @@ const userIcon=document.getElementById("user-icon");
 const btnBuy= document.querySelectorAll(".btn-buy");
 
 
+
 burger.addEventListener("click",(e)=>{
     burgerMain.classList.toggle("desplegar");
 });
