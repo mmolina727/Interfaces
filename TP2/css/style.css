@@ -859,7 +859,7 @@ font-family: 'Lato', sans-serif;*/
 @media (max-width: 700px){
 
     .left-navbar{
-        width: 25%;
+        width: 28%;
     }
 
     .burger-img{
@@ -876,11 +876,12 @@ font-family: 'Lato', sans-serif;*/
     }
 
     .lens-img{
-        margin-left: 75%;
+        margin-left: 70%;
     }
 
     .right-navbar{
         width: 18%;
+        padding-right: 20px;
     }
 
     .img-right-navbar{
