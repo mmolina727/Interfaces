@@ -793,8 +793,8 @@ font-family: 'Lato', sans-serif;*/
 
 .btn-a {
     position: absolute;
-    left:275px;
-    top:180px;
+    left:37%;
+    top:70%;
     font-weight: bold;
     border-radius: 15px;    
     border: #000;
