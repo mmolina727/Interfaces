@@ -254,13 +254,13 @@ font-family: 'Lato', sans-serif;*/
 
 .tag-free{
     width: auto;
-    background-color: rgba(16, 238, 78, 0.72);
+    background-color: rgb(0, 255, 72);
     position:absolute;
-    padding:0 10px;
+    padding:3px 20px;
     top:0%;
     right:0%;
     font-family: Lato;
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
