@@ -383,16 +383,16 @@ font-family: 'Lato', sans-serif;*/
     display: flex;
     flex-direction: row;
     height: auto;
-    text-align: center;
+    /* text-align: center; */
     padding-top: 76px;
 }
 
 .footer-info {
     display: flex;
-    width: 15%;
+    /* width: 10%; */
     height: auto;
     flex-direction: column;
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
 }
 
 .footer-info:nth-child(1) {
