@@ -760,6 +760,113 @@ font-family: 'Lato', sans-serif;*/
     margin-top: 65px;
 }
 
+/**************************************************************/
+/*====================== BOTON ANIMADO ======================*/
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+/* .play {
+    position: absolute;
+    left:40%;
+    top:55%;
+    width: 185px;
+    height: 59.954px;
+    transform: rotate(-14.031deg);
+    flex-shrink: 0;
+    border-radius: 5px;    
+    border: #000;
+    background-image: linear-gradient(180deg, #F51F1F 0%, #FF00B8 100%);
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}  */
+
+.btn-a {
+    position: absolute;
+    left:275px;
+    top:180px;
+    font-weight: bold;
+    border-radius: 15px;    
+    border: #000;
+    
+    width: 60px;
+    height: 20px;
+
+    
+    padding: 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 40px;
+    transition: 1s;
+    overflow: hidden;
+    text-decoration: none;
+}
+.bta:hover {
+    background: #ff22bb;
+    box-shadow: 0 0 10px #ff22bb,
+                0 0 30px #ff22bb,
+                
+}
+.btn-a::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 400%;
+    background-color: #ff22bb;
+    transition: 1s;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.33s * 0);
+}
+
+.btn-a:hover::before {
+    width: 120%;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.btn-a::after {
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(180deg, #F51F1F 0%, #FF00B8 100%);
+    inset: 4px;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+
+.btn-a:hover::after {
+    background-color: #ff22bb;
+}
+
+.btn-a span {
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: 0.5s;
+}
+
+.btn-a:hover span {
+    opacity: 1;
+    color: #0e1538;
+}
+/*************************************************************/
 @media (max-width: 700px){
 
     .left-navbar{
