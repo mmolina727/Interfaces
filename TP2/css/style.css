@@ -573,6 +573,11 @@ font-family: 'Lato', sans-serif;*/
     cursor: pointer;
 }
 
+.content-game aside img{
+    height: 90%;
+    margin-top: 20px;
+}
+
 .description-game-content {
     width: 68.5%;
     height: 468px;
@@ -647,7 +652,7 @@ font-family: 'Lato', sans-serif;*/
     width: 100%;
     height: 100%;
     margin-left: 40px;
-    margin-top: 15px;
+    margin-top: 45px;
 }
 
 .gameplay-content {
