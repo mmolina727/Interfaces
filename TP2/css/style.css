@@ -12,8 +12,13 @@ font-family: 'Lato', sans-serif;*/
     transform: translateY(-200%);
 }
 
-.opacity{
-    opacity:0.4;
+.opaci{
+    opacity: 0.6;
+
+}
+
+.random{
+    visibility: visible;
 }
 
 /* NAVBAR STYLE */

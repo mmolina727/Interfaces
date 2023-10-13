@@ -19,12 +19,24 @@ btnBuy.forEach(function(boton) {
     boton.addEventListener('click', function(event) {
         const tarjeta = event.target.closest('.card');
         const img= event.currentTarget.querySelector('img');
-        tarjeta.classList.toggle('opacity');
+        const contImg=tarjeta.querySelector('.content-img-card');
+        const contDes=tarjeta.querySelector('.content-description');
+        tarjeta.classList.toggle('random');
+        const elementos=tarjeta.querySelectorAll('*');
+
+        for(let i=0;i<elementos.length;i++){
+            if(elementos[i] == contImg||elementos[i] == contDes){
+                elementos[i].classList.add('opaci');
+            }
+        }
             if (img.src.endsWith('raphael_cart.png')) {
                 img.src='./img/ei_check.png';
+
             }
-            if(!tarjeta.classList.contains('opacity')){
+            if(!tarjeta.classList.contains('random')){
                 img.src='./img/raphael_cart.png'
+                contImg.classList.remove('opaci');
+                contDes.classList.remove('opaci');
             }
     });
 });
