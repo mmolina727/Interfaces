@@ -41,3 +41,40 @@ btnBuy.forEach(function(boton) {
     });
 });
 
+/* CARRUSEL */
+const carRight = document.querySelectorAll(".btn-next");
+const carLeft = document.querySelectorAll(".btn-prev");
+
+carRight.forEach(function (button, index) {
+  button.addEventListener("click", function () {
+    const carruselSlides = document.querySelector(`#carrusel-slides${index + 1}`);
+    carruselSlides.scrollLeft += 220;
+   
+     // Verificar si se ha llegado al final del carrusel
+     if (carruselSlides.scrollLeft >= carruselSlides.scrollWidth - carruselSlides.clientWidth - 220) {
+        // Ocultar el botón de siguiente (btn-next)
+        button.style.display = "none";
+      }
+      
+      // Mostrar el botón de anterior (btn-prev) si se ocultó previamente
+      const prevButton = button.previousElementSibling;
+      prevButton.style.display = "block";
+  });
+});
+
+carLeft.forEach(function (button, index) {
+  button.addEventListener("click", function () {
+    const carruselSlides = document.querySelector(`#carrusel-slides${index + 1}`);
+    carruselSlides.scrollLeft -= 220;
+    
+    // Verificar si volvemos al inicio del carrusel
+    if (carruselSlides.scrollLeft === 0) {
+        // Ocultar el botón de anterior (btn-prev)
+        button.style.display = "none";
+      }
+      
+      // Mostrar el botón de siguiente (btn-next) si se ocultó previamente
+      const nextButton = button.nextElementSibling;
+      nextButton.style.display = "block";
+  });
+});
