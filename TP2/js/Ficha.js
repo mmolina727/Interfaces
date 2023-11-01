@@ -43,7 +43,7 @@ class Ficha {
     }
 
     getPosY(){
-        return this.getPosY;
+        return this.posY;
     }
 
     

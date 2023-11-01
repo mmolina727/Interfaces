@@ -7,14 +7,15 @@ let circulos = [];
 let getCirculo = null;
 let mouseDown = false;
 
-const tablero = new TableroPosta(canvas, 7, 6, 70);
+const tablero = new TableroPosta(canvas, 6, 7, 70);
+
+console.log(tablero.tablero[0][1]);
 
 const fondoImage = new Image();
-fondoImage.src = "../img/fondo-tablero.jpg";
+fondoImage.src = "https://s2.best-wallpaper.net/wallpaper/1920x1080/1307/Plants-vs-Zombies-2_1920x1080.jpg";
 
 
 fondoImage.onload = () => {
-    // Llama a una función para dibujar el tablero con el fondo una vez que la imagen esté lista.
     tablero.dibujarTablero(fondoImage);
     const c1 = new Ficha(50, 70, 30, "white", 0, 2 * Math.PI,ctx);
     const c2 = new Ficha(50, 200, 30, "white", 0, 2 * Math.PI,ctx);
@@ -27,7 +28,6 @@ fondoImage.onload = () => {
 };
 
 tablero.dibujarTablero(fondoImage);
-
 
 canvas.addEventListener("mouseup", (e) => {
     if(getCirculo!=null){
@@ -42,7 +42,6 @@ canvas.addEventListener("mousedown", (e) => {
     mouseDown = true;
     let x = e.offsetX;
     let y = e.offsetY;
-    console.log(e.offsetY);
     circulos.forEach(element => {
         if (element.isPointInside(x, y)) {
             getCirculo = element;

@@ -19,12 +19,7 @@ class TableroPosta {
     }
 
     dibujarTablero(fondoImage) {
-        /*this.context.fillStyle = "lightgray";
-
-        this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);*/
-
-
-
+  
         this.context.drawImage(fondoImage,0,0,this.canvas.width,this.canvas.height);
 
         for (let i = 0; i < this.filas; i++) {
@@ -43,10 +38,9 @@ class TableroPosta {
         }
     }
 
-    isInTablero=(ficha)=>{
-
-        if(ficha.getPosX()>=this.tableroX && ficha.getPosX()<= this.tableroX+(this.columnas*this.casillaSize)){
-            for(let i=1;i<=this.columnas;i++){
+    isInTablero=(getCirculo)=>{
+        if(getCirculo.getPosX()>=this.tableroX && getCirculo.getPosX()<= this.tableroX+(this.columnas*this.casillaSize)){
+            /*for(let i=1;i<=this.columnas;i++){
                 if(getCirculo.getPosX()<this.tableroX+(i*this.casillaSize)){
                     ficha.setPosX(this.tableroX+ i*(this.casillaSize)-(this.casillaSize/2));
                     ficha.setPosY(535);
@@ -54,7 +48,70 @@ class TableroPosta {
                     drawCircle();
                     break;
                 }
-            }
+            }*/
+            let ejeX=this.ubicarFichaX(getCirculo);
+            let ejeY=this.ubicarFichaY(getCirculo);
+            getCirculo.setPosX(this.tableroX+ ejeX*(this.casillaSize)-(this.casillaSize/2));
+            getCirculo.setPosY(this.tableroY+ (ejeY)*(this.casillaSize)-(this.casillaSize/2));
+            getCirculo.ubicada=true;
+            this.tablero[ejeX][ejeY]=1;
+            console.log(ejeX);
+            console.log(ejeY);
+            console.log(this.tablero[1][6]);
+            drawCircle();
+            //hayGanador(this.tablero,ejeX,ejeY-1);
+        }
+        else{
+            //Si no esta sobre el x del tablero,se setea ubicacion de la ficha
+            getCirculo.setPosX(15);
+            getCirculo.setPosY(33);
+            drawCircle();
         }
     }
+
+    ubicarFichaX=(getCirculo)=>{
+        console.log(this.columnas);
+        for(let i=0;i<this.columnas;i++){
+            if(getCirculo.getPosX()<this.tableroX+(i*this.casillaSize)){
+                console.log("columna "+i);
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    ubicarFichaY=(getCirculo)=>{
+        console.log("cantidad de filas "+ this.filas);
+        let x=this.ubicarFichaX(getCirculo);
+        for(let j=this.filas;j>0;j--){
+            console.log(j);
+            if(this.tablero[x][j]==0){
+                return j;
+            }
+        }
+        return -1;
+    }
+
 }
+
+/*const hayGanador=(tablero,ejeX,ejeY)=>{
+
+    let contador=0;
+    //console.log(tablero[1][7]);
+
+
+    for(let i=7;i<=4;i--){
+        console.log("entro");
+        if(tablero[1][i]==1){
+            contador++;
+            console.log(contador);
+        }
+    }
+
+    if(contador==4){
+        alert("Hay ganador!!!");
+    }
+    else{
+        console.log("Segui participando");
+    }
+}*/
