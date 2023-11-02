@@ -48,7 +48,7 @@ class TableroPosta {
             this.tablero[ejeFila][ejeColumna]=1;
             console.log(`la ubicacion ${ejeFila}, ${ejeColumna} en el tablero es ${this.tablero[ejeFila][ejeColumna]}` );
             drawCircle();
-            hayGanador(this.tablero);
+            hayGanador(this.tablero,ejeFila,ejeColumna);
         }
         else{
             //Si no esta sobre el x del tablero,se setea ubicacion de la ficha
@@ -69,7 +69,6 @@ class TableroPosta {
 
         let posicionColumna=this.ubicarFichaColumna(getCirculo);
         for(let j=this.filas-1;j>0;j--){
-            console.log("entro");
             if(this.tablero[j][posicionColumna]===0){
                 return j;
             }
@@ -78,12 +77,83 @@ class TableroPosta {
     }
 }
 
-const hayGanador=(tablero)=>{
+const hayGanador=(tablero,ejeFila,ejeColumna)=>{
 
-    let contador=0;
-    if(tablero[5][0]==1&&tablero[4][0]==1&&tablero[3][0]==1&&tablero[2][0]==1){
-        alert("Hay ganador!!!");
+    horizontalIzq(tablero,ejeFila,ejeColumna);
+    horizontalDer(tablero,ejeFila,ejeColumna);
+    verificarColumna(tablero,ejeColumna);
+    diagonalDer(tablero,ejeFila,ejeColumna);
+    diagonalIzq(tablero,ejeFila,ejeColumna);
+
+}
+
+const horizontalIzq=(tablero,ejeFila,ejeColumna)=>{
+    let linea=0;
+
+    for (let i= 0;i<=3;i++) {
+        if(tablero[ejeFila][ejeColumna+i]==1){
+            linea++;
+        }
     }
-    console.log(tablero[5][0]);
-    console.log(contador);
+    if(linea==4){
+        alert("Ganaste!!");
+    }
+}
+
+const horizontalDer=(tablero,ejeFila,ejeColumna)=>{
+    let linea=0;
+
+    for (let i= 0;i<=3;i++) {
+        if(tablero[ejeFila][ejeColumna-i]==1){
+            linea++;
+        }
+    }
+    if(linea==4){
+        alert("Ganaste!!");
+    }
+}
+
+const diagonalDer=(tablero,ejeFila,ejeColumna)=>{
+
+    let linea=0;
+
+    for (let i= 0;i<=3;i++) {
+        if(tablero[ejeFila-i][ejeColumna+i]==1){
+            linea++;
+        }
+    }
+    if(linea==4){
+        alert("Ganaste!!");
+    }
+
+}
+
+const diagonalIzq=(tablero,ejeFila,ejeColumna)=>{
+
+    let linea=0;
+
+    for (let i= 0;i<=3;i++) {
+        if(tablero[ejeFila-i][ejeColumna-i]==1){
+            linea++;
+        }
+    }
+    if(linea==4){
+        alert("Ganaste!!");
+    }
+
+}
+
+const verificarColumna = (tablero, columna) => {
+    const longitud = tablero.length;
+    
+    for (let fila = longitud - 1; fila >= 3; fila--) {
+        if (
+            tablero[fila][columna] === 1 &&
+            tablero[fila - 1][columna] === 1 &&
+            tablero[fila - 2][columna] === 1 &&
+            tablero[fila - 3][columna] === 1
+        ) {
+            alert("Ganoooo!");
+        }
+    }
 }
