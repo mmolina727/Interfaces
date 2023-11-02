@@ -9,7 +9,7 @@ let mouseDown = false;
 
 const tablero = new TableroPosta(canvas, 6, 7, 70);
 
-console.log(tablero.tablero[0][1]);
+console.log(tablero.tablero[2][5]);
 
 const fondoImage = new Image();
 fondoImage.src = "https://s2.best-wallpaper.net/wallpaper/1920x1080/1307/Plants-vs-Zombies-2_1920x1080.jpg";
@@ -42,6 +42,7 @@ canvas.addEventListener("mousedown", (e) => {
     mouseDown = true;
     let x = e.offsetX;
     let y = e.offsetY;
+    //console.log(e.offsetY);
     circulos.forEach(element => {
         if (element.isPointInside(x, y)) {
             getCirculo = element;
