@@ -1,7 +1,7 @@
 
 
 class Ficha {
-    constructor(posX, posY, rad, fill, start, end,ctx) {
+    constructor(posX, posY, rad, fill, start, end,ctx,xIni,yIni) {
         this.posX = posX;
         this.posY = posY;
         this.rad = rad;
@@ -9,6 +9,8 @@ class Ficha {
         this.start = start;
         this.end = end;
         this.ctx=ctx;
+        this.xIni=xIni;
+        this.yIni=yIni;
         this.ubicada=false;
     }
 

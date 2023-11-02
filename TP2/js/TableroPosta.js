@@ -51,8 +51,8 @@ class TableroPosta {
         }
         else{
             //Si no esta sobre el x,y del tablero,se setea ubicacion de la ficha
-            getCirculo.setPosX(15);
-            getCirculo.setPosY(33);
+            getCirculo.setPosX(getCirculo.xIni);
+            getCirculo.setPosY(getCirculo.yIni);
             drawCircle();
         }
     }
