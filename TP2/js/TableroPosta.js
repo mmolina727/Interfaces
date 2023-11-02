@@ -39,19 +39,18 @@ class TableroPosta {
     }
 
     isInTablero=(getCirculo)=>{
-        if(getCirculo.getPosX()>=this.tableroX && getCirculo.getPosX()<= this.tableroX+(this.columnas*this.casillaSize)){
+        if(getCirculo.getPosX()>=this.tableroX && getCirculo.getPosX()<= this.tableroX+(this.columnas*this.casillaSize)&&getCirculo.getPosY()<this.tableroY){
             let ejeColumna=this.ubicarFichaColumna(getCirculo);
             let ejeFila=this.ubicarFichaFila(getCirculo);
             getCirculo.setPosX(this.tableroX+ (ejeColumna+1)*(this.casillaSize)-(this.casillaSize/2));
             getCirculo.setPosY(this.tableroY+ (ejeFila+1)*(this.casillaSize)-(this.casillaSize/2));
             getCirculo.ubicada=true;
             this.tablero[ejeFila][ejeColumna]=1;
-            console.log(`la ubicacion ${ejeFila}, ${ejeColumna} en el tablero es ${this.tablero[ejeFila][ejeColumna]}` );
             drawCircle();
             hayGanador(this.tablero,ejeFila,ejeColumna);
         }
         else{
-            //Si no esta sobre el x del tablero,se setea ubicacion de la ficha
+            //Si no esta sobre el x,y del tablero,se setea ubicacion de la ficha
             getCirculo.setPosX(15);
             getCirculo.setPosY(33);
             drawCircle();

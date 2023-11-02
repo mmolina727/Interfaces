@@ -36,9 +36,8 @@ fondoImage.onload = () => {
 tablero.dibujarTablero(fondoImage);
 
 canvas.addEventListener("mouseup", (e) => {
-    if(getCirculo!=null&&getCirculo.ubicada==false){
+    if(getCirculo!=null&&getCirculo.ubicada!=true){
         tablero.isInTablero(getCirculo);
-        getCirculo.ubicada=true;
     }
     mouseDown = false;
     getCirculo = null;
@@ -49,7 +48,6 @@ canvas.addEventListener("mousedown", (e) => {
     mouseDown = true;
     let x = e.offsetX;
     let y = e.offsetY;
-    //console.log(e.offsetY);
     circulos.forEach(element => {
         if (element.isPointInside(x, y)) {
             getCirculo = element;
