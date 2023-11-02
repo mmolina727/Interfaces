@@ -45,9 +45,10 @@ class TableroPosta {
             getCirculo.setPosX(this.tableroX+ (ejeColumna+1)*(this.casillaSize)-(this.casillaSize/2));
             getCirculo.setPosY(this.tableroY+ (ejeFila+1)*(this.casillaSize)-(this.casillaSize/2));
             getCirculo.ubicada=true;
-            this.tablero[ejeFila][ejeColumna]=1;
+            this.tablero[ejeFila][ejeColumna]=getCirculo.valor;
             drawCircle();
-            hayGanador(this.tablero,ejeFila,ejeColumna);
+            hayGanador(this.tablero,ejeFila,ejeColumna,getCirculo);
+            cambiarTurno();
         }
         else{
             //Si no esta sobre el x,y del tablero,se setea ubicacion de la ficha
@@ -76,21 +77,21 @@ class TableroPosta {
     }
 }
 
-const hayGanador=(tablero,ejeFila,ejeColumna)=>{
+const hayGanador=(tablero,ejeFila,ejeColumna,getCirculo)=>{
 
-    horizontalIzq(tablero,ejeFila,ejeColumna);
-    horizontalDer(tablero,ejeFila,ejeColumna);
-    verificarColumna(tablero,ejeColumna);
-    diagonalDer(tablero,ejeFila,ejeColumna);
-    diagonalIzq(tablero,ejeFila,ejeColumna);
+    horizontalIzq(tablero,ejeFila,ejeColumna,getCirculo);
+    horizontalDer(tablero,ejeFila,ejeColumna,getCirculo);
+    verificarColumna(tablero,ejeColumna,getCirculo);
+    diagonalDer(tablero,ejeFila,ejeColumna,getCirculo); //revisar!
+    diagonalIzq(tablero,ejeFila,ejeColumna,getCirculo); //revisar!
 
 }
 
-const horizontalIzq=(tablero,ejeFila,ejeColumna)=>{
+const horizontalIzq=(tablero,ejeFila,ejeColumna,getCirculo)=>{
     let linea=0;
 
     for (let i= 0;i<=3;i++) {
-        if(tablero[ejeFila][ejeColumna+i]==1){
+        if(tablero[ejeFila][ejeColumna+i]==getCirculo.valor){
             linea++;
         }
     }
@@ -99,11 +100,11 @@ const horizontalIzq=(tablero,ejeFila,ejeColumna)=>{
     }
 }
 
-const horizontalDer=(tablero,ejeFila,ejeColumna)=>{
+const horizontalDer=(tablero,ejeFila,ejeColumna,getCirculo)=>{
     let linea=0;
 
     for (let i= 0;i<=3;i++) {
-        if(tablero[ejeFila][ejeColumna-i]==1){
+        if(tablero[ejeFila][ejeColumna-i]==getCirculo.valor){
             linea++;
         }
     }
@@ -112,27 +113,12 @@ const horizontalDer=(tablero,ejeFila,ejeColumna)=>{
     }
 }
 
-const diagonalDer=(tablero,ejeFila,ejeColumna)=>{
+const diagonalDer=(tablero,ejeFila,ejeColumna,getCirculo)=>{
 
     let linea=0;
 
     for (let i= 0;i<=3;i++) {
-        if(tablero[ejeFila-i][ejeColumna+i]==1){
-            linea++;
-        }
-    }
-    if(linea==4){
-        alert("Ganaste!!");
-    }
-
-}
-
-const diagonalIzq=(tablero,ejeFila,ejeColumna)=>{
-
-    let linea=0;
-
-    for (let i= 0;i<=3;i++) {
-        if(tablero[ejeFila-i][ejeColumna-i]==1){
+        if(tablero[ejeFila-i][ejeColumna+i]==getCirculo.valor){
             linea++;
         }
     }
@@ -142,17 +128,43 @@ const diagonalIzq=(tablero,ejeFila,ejeColumna)=>{
 
 }
 
-const verificarColumna = (tablero, columna) => {
+const diagonalIzq=(tablero,ejeFila,ejeColumna,getCirculo)=>{
+
+    let linea=0;
+
+    for (let i= 0;i<=3;i++) {
+        if(tablero[ejeFila-i][ejeColumna-i]==getCirculo.valor){
+            linea++;
+        }
+    }
+    if(linea==4){
+        alert("Ganaste!!");
+    }
+
+}
+
+const verificarColumna = (tablero, columna,getCirculo) => {
     const longitud = tablero.length;
     
     for (let fila = longitud - 1; fila >= 3; fila--) {
         if (
-            tablero[fila][columna] === 1 &&
-            tablero[fila - 1][columna] === 1 &&
-            tablero[fila - 2][columna] === 1 &&
-            tablero[fila - 3][columna] === 1
+            tablero[fila][columna] === getCirculo.valor &&
+            tablero[fila - 1][columna] === getCirculo.valor &&
+            tablero[fila - 2][columna] === getCirculo.valor &&
+            tablero[fila - 3][columna] === getCirculo.valor
         ) {
             alert("Ganoooo!");
+        }
+    }
+}
+
+const cambiarTurno=()=>{
+    for(let i=0;i<circulos.length;i++){
+        if(circulos[i].turno==true){
+            circulos[i].turno=false;
+        }
+        else{
+            circulos[i].turno=true;
         }
     }
 }
