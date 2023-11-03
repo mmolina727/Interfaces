@@ -68,7 +68,7 @@ class TableroPosta {
     ubicarFichaFila=(getCirculo)=>{
 
         let posicionColumna=this.ubicarFichaColumna(getCirculo);
-        for(let j=this.filas-1;j>0;j--){
+        for(let j=this.filas-1;j>=0;j--){
             if(this.tablero[j][posicionColumna]===0){
                 return j;
             }
@@ -82,8 +82,9 @@ const hayGanador=(tablero,ejeFila,ejeColumna,getCirculo)=>{
     horizontalIzq(tablero,ejeFila,ejeColumna,getCirculo);
     horizontalDer(tablero,ejeFila,ejeColumna,getCirculo);
     verificarColumna(tablero,ejeColumna,getCirculo);
-    diagonalDer(tablero,ejeFila,ejeColumna,getCirculo); //revisar!
-    diagonalIzq(tablero,ejeFila,ejeColumna,getCirculo); //revisar!
+    diagonalDerAsc(tablero,ejeFila,ejeColumna,getCirculo); 
+    diagonalDerDesc(tablero,ejeFila,ejeColumna,getCirculo); 
+    diagonalIzqDesc(tablero,ejeFila,ejeColumna,getCirculo);
 
 }
 
@@ -113,13 +114,21 @@ const horizontalDer=(tablero,ejeFila,ejeColumna,getCirculo)=>{
     }
 }
 
-const diagonalDer=(tablero,ejeFila,ejeColumna,getCirculo)=>{
+const diagonalDerAsc=(tablero,ejeFila,ejeColumna,getCirculo)=>{
 
     let linea=0;
 
     for (let i= 0;i<=3;i++) {
-        if(tablero[ejeFila-i][ejeColumna+i]==getCirculo.valor){
-            linea++;
+        if ((
+            ejeFila >= 0 && ejeFila < tablero.length &&
+            ejeColumna >= 0 && ejeColumna < tablero[0].length &&
+            (ejeFila + i) >= 0 && (ejeFila + i) < tablero.length &&
+            (ejeColumna - i) >= 0 && (ejeColumna - i) < tablero[0].length
+        )){
+            //console.log(tablero[6][7]);
+            if(tablero[ejeFila+i][ejeColumna-i]==getCirculo.valor){
+                linea++;
+            }
         }
     }
     if(linea==4){
@@ -128,11 +137,39 @@ const diagonalDer=(tablero,ejeFila,ejeColumna,getCirculo)=>{
 
 }
 
-const diagonalIzq=(tablero,ejeFila,ejeColumna,getCirculo)=>{
+const diagonalDerDesc=(tablero,ejeFila,ejeColumna,getCirculo)=>{
 
     let linea=0;
 
     for (let i= 0;i<=3;i++) {
+        if ((
+            ejeFila >= 0 && ejeFila < tablero.length &&
+            ejeColumna >= 0 && ejeColumna < tablero[0].length &&
+            (ejeFila - i) >= 0 && (ejeFila - i) < tablero.length &&
+            (ejeColumna + i) >= 0 && (ejeColumna + i) < tablero[0].length
+        )){
+            if(tablero[ejeFila-i][ejeColumna+i]==getCirculo.valor){
+                linea++;
+            }
+        }
+    }
+    if(linea==4){
+        alert("Ganaste!!");
+    }
+
+}
+
+const diagonalIzqDesc=(tablero,ejeFila,ejeColumna,getCirculo)=>{
+
+    let linea=0;
+
+    for (let i= 0;i<=3;i++) {
+        if ((
+            ejeFila >= 0 && ejeFila < tablero.length &&
+            ejeColumna >= 0 && ejeColumna < tablero[0].length &&
+            (ejeFila - i) >= 0 && (ejeFila - i) < tablero.length &&
+            (ejeColumna - i) >= 0 && (ejeColumna - i) < tablero[0].length
+        ))
         if(tablero[ejeFila-i][ejeColumna-i]==getCirculo.valor){
             linea++;
         }

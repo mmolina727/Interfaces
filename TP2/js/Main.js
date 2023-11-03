@@ -15,7 +15,7 @@ fondoImage.src = "https://s2.best-wallpaper.net/wallpaper/1920x1080/1307/Plants-
 fondoImage.onload = () => {
     tablero.dibujarTablero(fondoImage);
 
-    
+    //Fichas del jugador 1
     const c1 = new Ficha(280, 100, 30, "white", 0, 2 * Math.PI,ctx,280,100,true,1);
     const c2 = new Ficha(280, 120, 30, "white", 0, 2 * Math.PI,ctx,280,120,true,1);
     const c3 = new Ficha(280, 140, 30, "white", 0, 2 * Math.PI,ctx,280,140,true,1);
@@ -37,6 +37,7 @@ fondoImage.onload = () => {
     const c19 = new Ficha(280, 460, 30, "white", 0, 2 * Math.PI,ctx,280,460,true,1);    
     const c20 = new Ficha(280, 480, 30, "white", 0, 2 * Math.PI,ctx,280,480,true,1);
     
+    //Fichas del jugador 2
     const c21 = new Ficha(1000, 100, 30, "yellow", 0, 2 * Math.PI,ctx,1000,100,false,2);
     const c22 = new Ficha(1000, 120, 30, "yellow", 0, 2 * Math.PI,ctx,1000,120,false,2);
     const c23 = new Ficha(1000, 140, 30, "yellow", 0, 2 * Math.PI,ctx,1000,140,false,2);
@@ -80,8 +81,6 @@ canvas.addEventListener("mousedown", (e) => {
     mouseDown = true;
     let x = e.offsetX;
     let y = e.offsetY;
-    console.log("x"+x);
-    console.log("y"+y);
     circulos.forEach(element => {
         if (element.isPointInside(x, y)) {
             getCirculo = element;
