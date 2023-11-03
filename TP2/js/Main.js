@@ -1,15 +1,32 @@
 const canvas = document.getElementById("myCanva");
 const ctx = canvas.getContext("2d");
+const menu= document.getElementById("main-menu");
+const menuConfig= document.getElementById("game-configuration");
+let tablero;
+let fondoImage;
 
-let canvasHeight = 800;
-let canvasWidth = 800;
 let circulos = [];
 let getCirculo = null;
 let mouseDown = false;
 
-const tablero = new TableroPosta(canvas, 6, 7, 65,4);
+let lineaSeleccionada;
+let ff;
+let cc;
 
-const fondoImage = new Image();
+const instanciarTablero=(ff,cc,lineaSeleccionada)=>{
+    tablero= new TableroPosta(canvas,ff,cc,65,lineaSeleccionada);
+    return tablero;
+}
+
+menuConfig.addEventListener("submit",(e)=>{
+    e.preventDefault();
+
+    lineaSeleccionada= document.querySelector('input[name="lineas"]:checked').value;
+    let ff=8;
+    let cc=9;
+    const tablero=instanciarTablero(ff,cc,lineaSeleccionada);
+
+    fondoImage = new Image();
 fondoImage.src = "https://s2.best-wallpaper.net/wallpaper/1920x1080/1307/Plants-vs-Zombies-2_1920x1080.jpg";
 
 fondoImage.onload = () => {
@@ -64,11 +81,10 @@ fondoImage.onload = () => {
     drawCircle();
     
 };
+    tablero.dibujarTablero(fondoImage);
+    menu.style.display='none';
 
-tablero.dibujarTablero(fondoImage);
-
-
-canvas.addEventListener("mouseup", (e) => {
+    canvas.addEventListener("mouseup", (e) => {
     if(getCirculo!=null&&getCirculo.ubicada!=true){
         tablero.isInTablero(getCirculo);
     }
@@ -96,4 +112,6 @@ canvas.addEventListener("mousemove", (e) => {
         getCirculo.setPosY(y);
         drawCircle();
     }
+});
+
 });

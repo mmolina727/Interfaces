@@ -1,5 +1,3 @@
-
-
 class Ficha {
     constructor(posX, posY, rad, fill, start, end,ctx,xIni,yIni,turno,valor) {
         this.posX = posX;

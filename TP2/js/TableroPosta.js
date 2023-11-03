@@ -52,7 +52,7 @@ class TableroPosta {
             cambiarTurno();
         }
         else{
-            //Si no esta sobre el x,y del tablero,se setea ubicacion de la ficha
+            //Si no esta sobre el x,y del tablero,se setea la ficha a su ubicacion inicial
             getCirculo.setPosX(getCirculo.xIni);
             getCirculo.setPosY(getCirculo.yIni);
             drawCircle();
@@ -126,7 +126,6 @@ const diagonalDerAsc=(tablero,ejeFila,ejeColumna,getCirculo,lineas)=>{
             (ejeFila + i) >= 0 && (ejeFila + i) < tablero.length &&
             (ejeColumna - i) >= 0 && (ejeColumna - i) < tablero[0].length
         )){
-            //console.log(tablero[6][7]);
             if(tablero[ejeFila+i][ejeColumna-i]==getCirculo.valor){
                 linea++;
             }
