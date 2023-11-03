@@ -7,7 +7,7 @@ let circulos = [];
 let getCirculo = null;
 let mouseDown = false;
 
-const tablero = new TableroPosta(canvas, 6, 7, 70);
+const tablero = new TableroPosta(canvas, 6, 7, 65,4);
 
 const fondoImage = new Image();
 fondoImage.src = "https://s2.best-wallpaper.net/wallpaper/1920x1080/1307/Plants-vs-Zombies-2_1920x1080.jpg";
@@ -38,26 +38,26 @@ fondoImage.onload = () => {
     const c20 = new Ficha(280, 480, 30, "white", 0, 2 * Math.PI,ctx,280,480,true,1);
     
     //Fichas del jugador 2
-    const c21 = new Ficha(1000, 100, 30, "yellow", 0, 2 * Math.PI,ctx,1000,100,false,2);
-    const c22 = new Ficha(1000, 120, 30, "yellow", 0, 2 * Math.PI,ctx,1000,120,false,2);
-    const c23 = new Ficha(1000, 140, 30, "yellow", 0, 2 * Math.PI,ctx,1000,140,false,2);
-    const c24 = new Ficha(1000, 160, 30, "yellow", 0, 2 * Math.PI,ctx,1000,160,false,2); 
-    const c25 = new Ficha(1000, 180, 30, "yellow", 0, 2 * Math.PI,ctx,1000,180,false,2); 
-    const c26 = new Ficha(1000, 200, 30, "yellow", 0, 2 * Math.PI,ctx,1000,200,false,2); 
-    const c27 = new Ficha(1000, 220, 30, "yellow", 0, 2 * Math.PI,ctx,1000,220,false,2);    
-    const c28 = new Ficha(1000, 240, 30, "yellow", 0, 2 * Math.PI,ctx,1000,240,false,2);    
-    const c29 = new Ficha(1000, 260, 30, "yellow", 0, 2 * Math.PI,ctx,1000,260,false,2);    
-    const c30 = new Ficha(1000, 280, 30, "yellow", 0, 2 * Math.PI,ctx,1000,280,false,2);
-    const c31 = new Ficha(1000, 300, 30, "yellow", 0, 2 * Math.PI,ctx,1000,300,false,2);    
-    const c32 = new Ficha(1000, 320, 30, "yellow", 0, 2 * Math.PI,ctx,1000,320,false,2);    
-    const c33 = new Ficha(1000, 340, 30, "yellow", 0, 2 * Math.PI,ctx,1000,340,false,2);    
-    const c34 = new Ficha(1000, 360, 30, "yellow", 0, 2 * Math.PI,ctx,1000,360,false,2);    
-    const c35 = new Ficha(1000, 380, 30, "yellow", 0, 2 * Math.PI,ctx,1000,380,false,2);    
-    const c36 = new Ficha(1000, 400, 30, "yellow", 0, 2 * Math.PI,ctx,1000,400,false,2);    
-    const c37 = new Ficha(1000, 420, 30, "yellow", 0, 2 * Math.PI,ctx,1000,420,false,2);    
-    const c38 = new Ficha(1000, 440, 30, "yellow", 0, 2 * Math.PI,ctx,1000,440,false,2);    
-    const c39 = new Ficha(1000, 460, 30, "yellow", 0, 2 * Math.PI,ctx,1000,460,false,2);    
-    const c40 = new Ficha(1000, 480, 30, "yellow", 0, 2 * Math.PI,ctx,1000,480,false,2);    
+    const c21 = new Ficha(1020, 100, 30, "yellow", 0, 2 * Math.PI,ctx,1000,100,false,2);
+    const c22 = new Ficha(1020, 120, 30, "yellow", 0, 2 * Math.PI,ctx,1000,120,false,2);
+    const c23 = new Ficha(1020, 140, 30, "yellow", 0, 2 * Math.PI,ctx,1000,140,false,2);
+    const c24 = new Ficha(1020, 160, 30, "yellow", 0, 2 * Math.PI,ctx,1000,160,false,2); 
+    const c25 = new Ficha(1020, 180, 30, "yellow", 0, 2 * Math.PI,ctx,1000,180,false,2); 
+    const c26 = new Ficha(1020, 200, 30, "yellow", 0, 2 * Math.PI,ctx,1000,200,false,2); 
+    const c27 = new Ficha(1020, 220, 30, "yellow", 0, 2 * Math.PI,ctx,1000,220,false,2);    
+    const c28 = new Ficha(1020, 240, 30, "yellow", 0, 2 * Math.PI,ctx,1000,240,false,2);    
+    const c29 = new Ficha(1020, 260, 30, "yellow", 0, 2 * Math.PI,ctx,1000,260,false,2);    
+    const c30 = new Ficha(1020, 280, 30, "yellow", 0, 2 * Math.PI,ctx,1000,280,false,2);
+    const c31 = new Ficha(1020, 300, 30, "yellow", 0, 2 * Math.PI,ctx,1000,300,false,2);    
+    const c32 = new Ficha(1020, 320, 30, "yellow", 0, 2 * Math.PI,ctx,1000,320,false,2);    
+    const c33 = new Ficha(1020, 340, 30, "yellow", 0, 2 * Math.PI,ctx,1000,340,false,2);    
+    const c34 = new Ficha(1020, 360, 30, "yellow", 0, 2 * Math.PI,ctx,1000,360,false,2);    
+    const c35 = new Ficha(1020, 380, 30, "yellow", 0, 2 * Math.PI,ctx,1000,380,false,2);    
+    const c36 = new Ficha(1020, 400, 30, "yellow", 0, 2 * Math.PI,ctx,1000,400,false,2);    
+    const c37 = new Ficha(1020, 420, 30, "yellow", 0, 2 * Math.PI,ctx,1000,420,false,2);    
+    const c38 = new Ficha(1020, 440, 30, "yellow", 0, 2 * Math.PI,ctx,1000,440,false,2);    
+    const c39 = new Ficha(1020, 460, 30, "yellow", 0, 2 * Math.PI,ctx,1000,460,false,2);    
+    const c40 = new Ficha(1020, 480, 30, "yellow", 0, 2 * Math.PI,ctx,1000,480,false,2);    
 
         
     circulos.push(c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,c20,c21,c22,c23,c24,c25,c26,c27,c28,c29,c30,c31,c32,c33,c34,c35,c36,c37,c38,c39,c40);
