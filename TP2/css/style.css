@@ -872,6 +872,7 @@ font-family: 'Lato', sans-serif;*/
     right: 17%;
     top:5%;
     background-color:#212233;
+    z-index: 2;
 }
 
 .main-game p{
@@ -887,6 +888,23 @@ font-family: 'Lato', sans-serif;*/
 
 .line-configuration{
     margin:auto;
+}
+
+.time{
+    width: 15%;
+    height: 35px;
+    margin-left: 48%;
+    position: absolute;
+    top:90%;
+    right: 80%;
+}
+
+.number-timer{
+    color:white;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: monospace;
+    text-shadow: 6px 6px 6px #000;
 }
 
 /*************************************************************/

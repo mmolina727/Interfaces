@@ -2,9 +2,13 @@ const canvas = document.getElementById("myCanva");
 const ctx = canvas.getContext("2d");
 const menu = document.getElementById("main-menu");
 const menuConfig = document.getElementById("game-configuration");
+const divTimer= document.getElementById("timer");
+const numberTimer= document.getElementById("number");
+
 
 const FICHASJUGADOR = 20;
 const RADIO = 30;
+let timer=101;
 
 let tablero;
 let fondoImage;
@@ -14,25 +18,33 @@ let getCirculo = null;
 let mouseDown = false;
 
 let lineaSeleccionada;
-let ff;
-let cc;
 
-const instanciarTablero = (ff, cc, lineaSeleccionada) => {
-    tablero = new TableroPosta(canvas, ff, cc, 65, lineaSeleccionada);
+const instanciarTablero = (lineaSeleccionada) => {
+    tablero = new TableroPosta(canvas,parseInt(lineaSeleccionada)+2, parseInt(lineaSeleccionada)+3, 65, lineaSeleccionada);
     return tablero;
+}
+
+const timerGame=()=>{setInterval(()=>{
+    if(timer>0){
+        timer--;
+        numberTimer.innerHTML= "TIME: "+timer;
+    }
+    else{
+        alert("Tiempo terminado. Empate!");
+        finalizarJuego();
+    }
+},1000);
 }
 
 menuConfig.addEventListener("submit", (e) => {
     e.preventDefault();
 
     lineaSeleccionada = document.querySelector('input[name="lineas"]:checked').value;
-    let ff = 8;
-    let cc = 9;
-    const tablero = instanciarTablero(ff, cc, lineaSeleccionada);
+    const tablero = instanciarTablero(lineaSeleccionada);
 
     fondoImage = new Image();
-    fondoImage.src = '../img/fondo-tablero.jpg';
-    //fondoImage.src = "https://s2.best-wallpaper.net/wallpaper/1920x1080/1307/Plants-vs-Zombies-2_1920x1080.jpg";
+    //fondoImage.src = '../img/fondo-tablero.jpg';
+    fondoImage.src = "https://s2.best-wallpaper.net/wallpaper/1920x1080/1307/Plants-vs-Zombies-2_1920x1080.jpg";
 
     fondoImage.onload = () => {
         tablero.dibujarTablero(fondoImage);
@@ -57,9 +69,9 @@ menuConfig.addEventListener("submit", (e) => {
                 const y = 100 + (i * 20);
     
                 // Crear fichas para el jugador 1 (amarillas/plantas)
-                const jugador1 = new Ficha(x1, y, RADIO, '#FFFF00', 0, 2 * Math.PI, ctx, 280, 100, true, 1, imagenFichaJugador1);
+                const jugador1 = new Ficha(x1, y, RADIO, '#FFFF00', 0, 2 * Math.PI, ctx, x1, y, true, 1, imagenFichaJugador1);
                  // Crear fichas para el jugador 2 (moradas/zombies)
-                const jugador2 = new Ficha(x2, y, RADIO, '#800080', 0, 2 * Math.PI, ctx, 280, 100, false, 2, imagenFichaJugador2);
+                const jugador2 = new Ficha(x2, y, RADIO, '#800080', 0, 2 * Math.PI, ctx, x2, y, false, 2, imagenFichaJugador2);
    
                 fichas.push(jugador1, jugador2);
             }
@@ -73,6 +85,8 @@ menuConfig.addEventListener("submit", (e) => {
 
     tablero.dibujarTablero(fondoImage);
     menu.style.display = 'none';
+
+    timerGame();
 
     canvas.addEventListener("mouseup", (e) => {
         if (getCirculo != null && getCirculo.ubicada != true) {

@@ -98,6 +98,7 @@ const horizontalIzq=(tablero,ejeFila,ejeColumna,getCirculo,lineas)=>{
         }
     }
     if(linea==lineas){
+        finalizarJuego();
         alert("Ganaste!!");
     }
 }
@@ -111,6 +112,7 @@ const horizontalDer=(tablero,ejeFila,ejeColumna,getCirculo,lineas)=>{
         }
     }
     if(linea==lineas){
+        finalizarJuego();
         alert("Ganaste!!");
     }
 }
@@ -132,6 +134,7 @@ const diagonalDerAsc=(tablero,ejeFila,ejeColumna,getCirculo,lineas)=>{
         }
     }
     if(linea==lineas){
+        finalizarJuego();
         alert("Ganaste!!");
     }
 
@@ -154,6 +157,7 @@ const diagonalDerDesc=(tablero,ejeFila,ejeColumna,getCirculo,lineas)=>{
         }
     }
     if(linea==lineas){
+        finalizarJuego();
         alert("Ganaste!!");
     }
 
@@ -175,6 +179,7 @@ const diagonalIzqDesc=(tablero,ejeFila,ejeColumna,getCirculo,lineas)=>{
         }
     }
     if(linea==lineas){
+        finalizarJuego();
         alert("Ganaste!!");
     }
 
@@ -195,6 +200,7 @@ const verificarColumna = (tablero,ejeFila,ejeColumna,getCirculo,lineas) => {
         }
     }
     if(linea==lineas){
+        finalizarJuego();
         alert("Ganaste!!");
     }
 }
@@ -207,5 +213,12 @@ const cambiarTurno=()=>{
         else{
             circulos[i].turno=true;
         }
+    }
+}
+
+const finalizarJuego=()=>{
+    for(let i=0;i<circulos.length;i++){
+            circulos[i].turno=false;
+            circulos[i].ubicada=true;
     }
 }
