@@ -26,7 +26,6 @@ class Ficha {
     isPointInside(x, y) {
         let _x = this.posX - x;
         let _y = this.posY - y;
-
         return Math.sqrt(_x * _x + _y * _y) < this.rad;
     }
 
@@ -46,9 +45,7 @@ class Ficha {
 
     getPosY(){
         return this.posY;
-    }
-
-    
+    }    
 }
 
 function clearCanvas() {
