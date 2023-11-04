@@ -1,5 +1,5 @@
 class Ficha {
-    constructor(posX, posY, rad, fill, start, end,ctx,xIni,yIni,turno,valor) {
+    constructor(posX, posY, rad, fill, start, end,ctx,xIni,yIni,turno,valor,img) {
         this.posX = posX;
         this.posY = posY;
         this.rad = rad;
@@ -12,6 +12,8 @@ class Ficha {
         this.turno=turno;
         this.valor=valor;
         this.ubicada=false;
+
+        this.img = img;
     }
 
     draw() {
@@ -21,6 +23,9 @@ class Ficha {
         ctx.fill();
         ctx.stroke();
         ctx.closePath();
+        if (this.img!=null){
+            ctx.drawImage(this.img, this.posX - this.rad, this.posY - this.rad, this.rad * 2, this.rad * 2);
+        }
     }
 
     isPointInside(x, y) {
