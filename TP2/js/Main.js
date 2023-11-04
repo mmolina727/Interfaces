@@ -36,37 +36,40 @@ menuConfig.addEventListener("submit", (e) => {
 
     fondoImage.onload = () => {
         tablero.dibujarTablero(fondoImage);
+       
+            // Obtener el valor de la ficha seleccionada por el jugador 1
+            const imagenFichaJugador1 = new Image();
+            const seleccionJugador1 = document.querySelector('input[name="f1"]:checked');
+            imagenFichaJugador1.src = seleccionJugador1 ? seleccionJugador1.value : '';
 
-        // Cargar imágenes para las fichas
-        let imagenFichasPlantas = new Image();
-        imagenFichasPlantas.src = '../img/ficha-planta.png';
+            // Obtener el valor de la ficha seleccionada por el jugador 2
+            const imagenFichaJugador2 = new Image();
+            const seleccionJugador2 = document.querySelector('input[name="f2"]:checked');
+            imagenFichaJugador2.src = seleccionJugador2 ? seleccionJugador2.value : '';
 
-        let imagenFichasZombies = new Image();
-        imagenFichasZombies.src = '../img/ficha-zombie.png';
-
-        imagenFichasPlantas.onload = imagenFichasZombies.onload = function () {
+            
+        imagenFichaJugador1.onload = imagenFichaJugador2.onload = function (){
             const fichas = [];
 
             for (let i = 0; i < FICHASJUGADOR; i++) {
                 const x1 = 280;
                 const x2 = 1020;
                 const y = 100 + (i * 20);
-
+    
                 // Crear fichas para el jugador 1 (amarillas/plantas)
-                const jugador1 = new Ficha(x1, y, RADIO, '#FFFF00', 0, 2 * Math.PI, ctx, 280, 100, true, 1, imagenFichasPlantas);
-                // Crear fichas para el jugador 2 (moradas/zombies)
-                const jugador2 = new Ficha(x2, y, RADIO, '#800080', 0, 2 * Math.PI, ctx, 280, 100, false, 2, imagenFichasZombies);
-
+                const jugador1 = new Ficha(x1, y, RADIO, '#FFFF00', 0, 2 * Math.PI, ctx, 280, 100, true, 1, imagenFichaJugador1);
+                 // Crear fichas para el jugador 2 (moradas/zombies)
+                const jugador2 = new Ficha(x2, y, RADIO, '#800080', 0, 2 * Math.PI, ctx, 280, 100, false, 2, imagenFichaJugador2);
+   
                 fichas.push(jugador1, jugador2);
             }
             for (const ficha of fichas) {
                 circulos.push(ficha);
             }
-
             drawCircle();
-        };
-
+        }
     };
+
 
     tablero.dibujarTablero(fondoImage);
     menu.style.display = 'none';
