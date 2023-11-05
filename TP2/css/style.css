@@ -543,6 +543,7 @@ font-family: 'Lato', sans-serif;*/
     position: relative;
 }
 
+
 .play-content aside {
     margin-left: 45px;
     width: 20%;
@@ -862,32 +863,78 @@ font-family: 'Lato', sans-serif;*/
 }
 
 /*********************MENU DEL JUEGO**************************/
+/* Oculta los radio predeterminados */
+input[type="radio"].player1, input[type="radio"].player2{
+    display: none;
+}
+
+/* Estilo personalizado para las etiquetas de radio */
+.radio-label1, .radio-label2 {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px; /* Ajusta el espacio alrededor de la imagen según tus necesidades */
+    
+}
+.radio-label1 img, .radio-label2 img {
+    width: 60px; /* Ajusta el tamaño de las imágenes según tus preferencias */
+    height: 60px;
+    margin-right: 10px; /* Añade espacio entre la imagen y el texto */
+}
+
+
+/* Estilo para cuando el radio esté seleccionado */
+input[type="radio"].player1:checked + label.radio-label1 img {
+    opacity: 0.2; /* Reduce la opacidad de la imagen cuando está seleccionada */
+    pointer-events: none; /* Deshabilita la interacción con la imagen */
+}
+/* Estilo para cuando el radio del player2 esté seleccionado */
+input[type="radio"].player2:checked + label.radio-label2 img {
+    opacity: 0.2; /* Reduce la opacidad de la imagen cuando está seleccionada */
+    pointer-events: none; /* Deshabilita la interacción con la imagen */
+}
+
 
 .main-game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position:absolute;
     border: solid black 2px;
     border-radius: 15px;
     width: 900px;
-    height: 500px;
-    right: 17%;
-    top:5%;
+    height: 500px;    
+    left: 90px ;
+    top:7%;
     background-color:#212233;
     z-index: 2;
+    flex-direction: column;    
 }
-
+h1.font-body{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
 .main-game p{
-    display: flex;
-    justify-content: center;
     align-items: center;
-    padding-top: 30px;
+    font-size: 22px;
+    color: #FFF;
+    margin-bottom: 10px;
+    text-align: center;
 }
 .main-game .configuration-game{
     width: 100%;
-    height: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
+.opcion{
+    color: #fff;
+    margin-right: 10px;
+    margin-left: 10px;
+}
 .line-configuration{
     margin:auto;
+    margin-top: 10px;
 }
 
 .time{
@@ -906,6 +953,24 @@ font-family: 'Lato', sans-serif;*/
     font-family: monospace;
     text-shadow: 6px 6px 6px #000;
 }
+
+
+/* Estilo para el botón "Jugar" */
+button[type="submit"] {
+    background-color: #ff22bb; /* Cambia el color de fondo del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Añade espacio superior */
+}
+
+button[type="submit"]:hover {
+    background-color: #8f2471; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+}
+
 
 /*************************************************************/
 @media (max-width: 700px) {

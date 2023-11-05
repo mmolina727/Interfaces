@@ -77,45 +77,58 @@
             <h1 class="font-h3 breadcrumb">juegos >> estrategia >> 4enlinea</h1>
             <div class="content-game">
                 <div class="main-game" id="main-menu">
-                    <p class="font-body">Main Menu</p>
+                    <h1 class="font-body">Main Menu</h1>
                     <form class="configuration-game" id="game-configuration">
                         <div class="line-configuration">
                             <p>Elija modalidad de juego</p>
-                            <label for="opcion1">4 en linea</label>
+                            <label class="opcion" for="opcion1">4 en linea</label>
                             <input type="radio" name="lineas" value="4">
-                            <label for="opcion2">5 en linea</label>
+                            <label class="opcion" for="opcion2">5 en linea</label>
                             <input type="radio" name="lineas" value="5">
-                            <label for="opcion3">6 en linea</label>
+                            <label class="opcion" for="opcion3">6 en linea</label>
                             <input type="radio" name="lineas" value="6">
-                            <button type="submit">Jugar</button>
+                            <!-- <button type="submit">Jugar</button> -->
                         </div>
                         <div class="line-configuration">
                             <p>Elija una ficha Personaje 1</p>
-                            <input type="radio" name="f1" value="./img/ficha-planta.png" id="f1">
-                            <img src="./img/ficha-planta.png" alt="opcion 1">
-                            <input type="radio" name="f1" value="./img/ficha-planta2.png" id="f2">
-                            <img src="./img/ficha-planta2.png" alt="opcion 2">
-                            <input type="radio" name="f1" value="./img/ficha-planta3.png" id="f3">
-                            <img src="./img/ficha-planta3.png" alt="opcion 3">
+                            <input type="radio" name="f1" value="./img/ficha-planta.png" id="f1" class="player1">
+                            <label for="f1" class="radio-label1">
+                                <img src="./img/ficha-planta.png" alt="opcion 1">
+                            </label>
+                            <input type="radio" name="f1" value="./img/ficha-planta2.png" id="f2" class="player1">
+                            <label for="f2" class="radio-label1">
+                                <img src="./img/ficha-planta2.png" alt="opcion 2">
+                            </label>
+                            <input type="radio" name="f1" value="./img/ficha-planta3.png" id="f3" class="player1">
+                            <label for="f3" class="radio-label1">
+                                <img src="./img/ficha-planta3.png" alt="opcion 3">
+                            </label>
                         </div>
+                        
                         <div class="line-configuration">
                             <p>Elija una ficha Personaje 2</p>
-                            <input type="radio" name="f2" value="./img/ficha-zombie.png" id="f1">
-                            <img src="./img/ficha-zombie.png" alt="opcion 1">
-                            <input type="radio" name="f2" value="./img/ficha-zombie2.png" id="f2">
-                            <img src="./img/ficha-zombie2.png" alt="opcion 2">
-                            <input type="radio" name="f2" value="./img/ficha-zombie3png.png" id="f3">
-                            <img src="./img/ficha-zombie3png.png" alt="opcion 3">
-
-                            <button type="submit">Jugar</button>
+                            <input type="radio" name="f2" value="./img/ficha-zombie.png" id="p-f1" class=player2>
+                            <label for="p-f1" class="radio-label2">
+                                <img src="./img/ficha-zombie.png" alt="opcion 1">
+                            </label>
+                            <input type="radio" name="f2" value="./img/ficha-zombie2.png" id="p-f2" class=player2>
+                            <label for="p-f2" class="radio-label2">
+                                <img src="./img/ficha-zombie2.png" alt="opcion 2">
+                            </label>
+                            <input type="radio" name="f2" value="./img/ficha-zombie3png.png" id="p-f3" class=player2>
+                            <label for="p-f3" class="radio-label2">
+                                <img src="./img/ficha-zombie3png.png" alt="opcion 3">
+                            </label>
                         </div>
+                        
+                        <button type="submit">Jugar</button>
                         
                     </form>
                 </div>
                 <div class="time" id="timer">
                     <p class="number-timer" id="number"></p>
                 </div>
-                <canvas width="1300" height="590" id="myCanva" style="border: rgb(255, 255, 255) solid 1px;"></canvas>
+                <canvas width="1080" height="590" id="myCanva" style="border: rgb(255, 255, 255) solid 1px;"></canvas>
                 <aside>
                     <img src="./img/casinoo.jpg" alt="banner">
                 </aside>
