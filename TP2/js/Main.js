@@ -43,8 +43,8 @@ menuConfig.addEventListener("submit", (e) => {
     const tablero = instanciarTablero(lineaSeleccionada);
 
     fondoImage = new Image();
-    //fondoImage.src = '../img/fondo-tablero.jpg';
-    fondoImage.src = "https://s2.best-wallpaper.net/wallpaper/1920x1080/1307/Plants-vs-Zombies-2_1920x1080.jpg";
+    fondoImage.src = '../img/fondo-tablero.jpg';
+  //fondoImage.src = "https://s2.best-wallpaper.net/wallpaper/1920x1080/1307/Plants-vs-Zombies-2_1920x1080.jpg";
 
     fondoImage.onload = () => {
         tablero.dibujarTablero(fondoImage);
@@ -64,8 +64,8 @@ menuConfig.addEventListener("submit", (e) => {
             const fichas = [];
 
             for (let i = 0; i < FICHASJUGADOR; i++) {
-                const x1 = 280;
-                const x2 = 1020;
+                const x1 = 200;//280
+                const x2 = 900;//1020
                 const y = 100 + (i * 20);
     
                 // Crear fichas para el jugador 1 (amarillas/plantas)
