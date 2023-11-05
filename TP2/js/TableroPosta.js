@@ -201,7 +201,8 @@ const verificarColumna = (tablero,ejeFila,ejeColumna,getCirculo,lineas) => {
     }
     if(linea==lineas){
         finalizarJuego();
-        alert("Ganaste!!");
+        mostrarMensajeGanador('GANASTE!!');
+        //alert("Ganaste!!");
     }
 }
 

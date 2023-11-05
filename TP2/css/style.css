@@ -863,6 +863,7 @@ font-family: 'Lato', sans-serif;*/
 }
 
 /*********************MENU DEL JUEGO**************************/
+
 /* Oculta los radio predeterminados */
 input[type="radio"].player1, input[type="radio"].player2{
     display: none;
@@ -881,7 +882,6 @@ input[type="radio"].player1, input[type="radio"].player2{
     margin-right: 10px; /* Añade espacio entre la imagen y el texto */
 }
 
-
 /* Estilo para cuando el radio esté seleccionado */
 input[type="radio"].player1:checked + label.radio-label1 img {
     opacity: 0.2; /* Reduce la opacidad de la imagen cuando está seleccionada */
@@ -892,7 +892,6 @@ input[type="radio"].player2:checked + label.radio-label2 img {
     opacity: 0.2; /* Reduce la opacidad de la imagen cuando está seleccionada */
     pointer-events: none; /* Deshabilita la interacción con la imagen */
 }
-
 
 .main-game{
     display: flex;
@@ -956,7 +955,7 @@ h1.font-body{
 
 
 /* Estilo para el botón "Jugar" */
-button[type="submit"] {
+button[type="submit"], #reiniciar-juego {
     background-color: #ff22bb; /* Cambia el color de fondo del botón */
     color: white;
     border: none;
@@ -971,6 +970,19 @@ button[type="submit"]:hover {
     background-color: #8f2471; /* Cambia el color de fondo al pasar el cursor sobre el botón */
 }
 
+/*Estilo para el boton de reiniciar*/
+#reiniciar-juego {
+    position:absolute;
+    background-color: #ff22bb; /* Cambia el color de fondo del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20%;
+    margin-left: 25%;
+}
 
 /*************************************************************/
 @media (max-width: 700px) {

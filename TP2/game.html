@@ -119,11 +119,13 @@
                             <label for="p-f3" class="radio-label2">
                                 <img src="./img/ficha-zombie3png.png" alt="opcion 3">
                             </label>
-                        </div>
-                        
-                        <button type="submit">Jugar</button>
-                        
+                        </div>                        
+                        <button type="submit">Jugar</button>                        
                     </form>
+                </div>
+                <!-- Agrego el boton de reiniciar -->
+                <div id="ganador-message" style="display: none;">
+                    <button id="reiniciar-juego" onclick="reiniciarJuego()">Reiniciar Juego</button>
                 </div>
                 <div class="time" id="timer">
                     <p class="number-timer" id="number"></p>
