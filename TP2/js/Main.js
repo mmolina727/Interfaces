@@ -50,8 +50,8 @@ const mostrarMensajeGanador = (mensaje) => {
     ganadorMessage.style.display = "block";
 
      // Tamaño y posición del rectángulo
-     const rectanguloWidth = canvas.width * 0.6;
-     const rectanguloHeight = canvas.height * 0.7;
+     const rectanguloWidth = canvas.width * 0.46; // 0.6 lo hace mas grande
+     const rectanguloHeight = canvas.height * 0.47;//0.7 lo hace mas grande 
      const rectanguloX = (canvas.width - rectanguloWidth) / 2;
      const rectanguloY = canvas.height / 2 - rectanguloHeight / 2;
      
@@ -76,7 +76,16 @@ const mostrarMensajeGanador = (mensaje) => {
     ctx.fillText(mensaje, x, y); 
     
 }
+const reiniciarJuego = () => {
+      // Detiene el temporizador antes de reiniciar
+      clearInterval(timerInterval);
+      ganadorMessage.style.display = "none";
+  
+      // Redirige a game.html
+      window.location.href = "game.html";
+}
 
+/*
 //metodo nuevo para reiniciar el juego, se dispara por el onclick del boton
 const reiniciarJuego = () => {
     // Detiene el temporizador antes de reiniciar
@@ -94,7 +103,7 @@ const reiniciarJuego = () => {
     timerGame();
     eventos();
 };
-
+*/
 const resetTablero = () => {
     for (let i = 0; i < tablero.filas; i++) {
         for (let j = 0; j < tablero.columnas; j++) {

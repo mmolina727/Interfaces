@@ -99,7 +99,7 @@ const horizontalIzq=(tablero,ejeFila,ejeColumna,getCirculo,lineas)=>{
     }
     if(linea==lineas){
         finalizarJuego();
-        alert("Ganaste!!");
+        mostrarMensajeGanador('GANASTE!!');
     }
 }
 
@@ -113,7 +113,7 @@ const horizontalDer=(tablero,ejeFila,ejeColumna,getCirculo,lineas)=>{
     }
     if(linea==lineas){
         finalizarJuego();
-        alert("Ganaste!!");
+        mostrarMensajeGanador('GANASTE!!');
     }
 }
 
@@ -135,7 +135,7 @@ const diagonalDerAsc=(tablero,ejeFila,ejeColumna,getCirculo,lineas)=>{
     }
     if(linea==lineas){
         finalizarJuego();
-        alert("Ganaste!!");
+        mostrarMensajeGanador('GANASTE!!');
     }
 
 }
@@ -158,7 +158,7 @@ const diagonalDerDesc=(tablero,ejeFila,ejeColumna,getCirculo,lineas)=>{
     }
     if(linea==lineas){
         finalizarJuego();
-        alert("Ganaste!!");
+        mostrarMensajeGanador('GANASTE!!');
     }
 
 }
@@ -180,7 +180,7 @@ const diagonalIzqDesc=(tablero,ejeFila,ejeColumna,getCirculo,lineas)=>{
     }
     if(linea==lineas){
         finalizarJuego();
-        alert("Ganaste!!");
+        mostrarMensajeGanador('GANASTE!!');
     }
 
 }
