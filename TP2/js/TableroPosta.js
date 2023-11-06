@@ -46,8 +46,8 @@ class TableroPosta {
             getCirculo.setPosX(this.tableroX+ (ejeColumna+1)*(this.casillaSize)-(this.casillaSize/2));
             getCirculo.setPosY(this.tableroY+ (ejeFila+1)*(this.casillaSize)-(this.casillaSize/2));
             getCirculo.ubicada=true;
-            this.tablero[ejeFila][ejeColumna]=getCirculo.valor;
             drawCircle();
+            this.tablero[ejeFila][ejeColumna]=getCirculo.valor;
             hayGanador(this.tablero,ejeFila,ejeColumna,getCirculo,this.lineas);
             cambiarTurno();
         }
@@ -99,7 +99,7 @@ const horizontalIzq=(tablero,ejeFila,ejeColumna,getCirculo,lineas)=>{
     }
     if(linea==lineas){
         finalizarJuego();
-        mostrarMensajeGanador('GANASTE!!');
+        mostrarMensajeGanador(`${getCirculo.jugador} WINS!`);
     }
 }
 
@@ -113,7 +113,7 @@ const horizontalDer=(tablero,ejeFila,ejeColumna,getCirculo,lineas)=>{
     }
     if(linea==lineas){
         finalizarJuego();
-        mostrarMensajeGanador('GANASTE!!');
+        mostrarMensajeGanador(`${getCirculo.jugador} WINS!`);
     }
 }
 
@@ -135,7 +135,7 @@ const diagonalDerAsc=(tablero,ejeFila,ejeColumna,getCirculo,lineas)=>{
     }
     if(linea==lineas){
         finalizarJuego();
-        mostrarMensajeGanador('GANASTE!!');
+        mostrarMensajeGanador(`${getCirculo.jugador} WINS!`);
     }
 
 }
@@ -158,7 +158,7 @@ const diagonalDerDesc=(tablero,ejeFila,ejeColumna,getCirculo,lineas)=>{
     }
     if(linea==lineas){
         finalizarJuego();
-        mostrarMensajeGanador('GANASTE!!');
+        mostrarMensajeGanador(`${getCirculo.jugador} WINS!`);
     }
 
 }
@@ -180,7 +180,7 @@ const diagonalIzqDesc=(tablero,ejeFila,ejeColumna,getCirculo,lineas)=>{
     }
     if(linea==lineas){
         finalizarJuego();
-        mostrarMensajeGanador('GANASTE!!');
+        mostrarMensajeGanador(`${getCirculo.jugador} WINS!`);
     }
 
 }
@@ -201,8 +201,7 @@ const verificarColumna = (tablero,ejeFila,ejeColumna,getCirculo,lineas) => {
     }
     if(linea==lineas){
         finalizarJuego();
-        mostrarMensajeGanador('GANASTE!!');
-        //alert("Ganaste!!");
+        mostrarMensajeGanador(`${getCirculo.jugador} WINS!`);
     }
 }
 

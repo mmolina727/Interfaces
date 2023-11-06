@@ -50,14 +50,13 @@ const mostrarMensajeGanador = (mensaje) => {
     ganadorMessage.style.display = "block";
 
      // Tamaño y posición del rectángulo
-     const rectanguloWidth = canvas.width * 0.46; // 0.6 lo hace mas grande
-     const rectanguloHeight = canvas.height * 0.47;//0.7 lo hace mas grande 
+     const rectanguloWidth = canvas.width * 0.4; // 0.6 lo hace mas grande
+     const rectanguloHeight = canvas.height * 0.2;//0.7 lo hace mas grande 
      const rectanguloX = (canvas.width - rectanguloWidth) / 2;
-     const rectanguloY = canvas.height / 2 - rectanguloHeight / 2;
      
      // Dibujar el rectángulo
      ctx.fillStyle = "#1C1F3A";
-     ctx.fillRect(rectanguloX, rectanguloY, rectanguloWidth, rectanguloHeight);
+     ctx.fillRect(rectanguloX, 10, rectanguloWidth, rectanguloHeight);
     
     // Crear un gradiente de color personalizado
     const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
@@ -65,13 +64,13 @@ const mostrarMensajeGanador = (mensaje) => {
     gradient.addColorStop(1, '#FF00B8'); // Color al final del gradiente
 
     // Dibujar el texto del mensaje
-    ctx.font = "80px 'monospace', serif";
+    ctx.font = "40px 'monospace', serif";
     ctx.fillStyle = gradient;
    // ctx.strokeStyle = "black";
     ctx.lineWidth = 4;
     ctx.textAlign = "center";
     let x = canvas.width / 2;
-    let y = canvas.height / 2;
+    let y = 50;
     ctx.strokeText(mensaje, x, y);
     ctx.fillText(mensaje, x, y); 
     
@@ -121,8 +120,8 @@ menuConfig.addEventListener("submit", (e) => {
     const tablero = instanciarTablero(lineaSeleccionada);
 
     fondoImage = new Image();
-    fondoImage.src = '../img/fondo-tablero.jpg';
-    //fondoImage.src = "https://s2.best-wallpaper.net/wallpaper/1920x1080/1307/Plants-vs-Zombies-2_1920x1080.jpg";
+    //fondoImage.src = '../img/fondo-tablero.jpg';
+    fondoImage.src = "https://s2.best-wallpaper.net/wallpaper/1920x1080/1307/Plants-vs-Zombies-2_1920x1080.jpg";
 
     fondoImage.onload = () => {
         tablero.dibujarTablero(fondoImage);
@@ -147,9 +146,9 @@ menuConfig.addEventListener("submit", (e) => {
                 const y = 100 + (i * 20);
 
                 // Crear fichas para el jugador 1 (amarillas/plantas)
-                const jugador1 = new Ficha(x1, y, RADIO, '#FFFF00', 0, 2 * Math.PI, ctx, x1, y, true, 1, imagenFichaJugador1);
+                const jugador1 = new Ficha(x1, y, RADIO, '#FFFF00', 0, 2 * Math.PI, ctx, x1, y, true, 1, imagenFichaJugador1,"PLANTS");
                 // Crear fichas para el jugador 2 (moradas/zombies)
-                const jugador2 = new Ficha(x2, y, RADIO, '#800080', 0, 2 * Math.PI, ctx, x2, y, false, 2, imagenFichaJugador2);
+                const jugador2 = new Ficha(x2, y, RADIO, '#800080', 0, 2 * Math.PI, ctx, x2, y, false, 2, imagenFichaJugador2,"ZOMBIES");
 
                 fichas.push(jugador1, jugador2);
             }

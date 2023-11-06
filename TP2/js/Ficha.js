@@ -1,5 +1,5 @@
 class Ficha {
-    constructor(posX, posY, rad, fill, start, end,ctx,xIni,yIni,turno,valor,img) {
+    constructor(posX, posY, rad, fill, start, end,ctx,xIni,yIni,turno,valor,img,jugador) {
         this.posX = posX;
         this.posY = posY;
         this.rad = rad;
@@ -12,8 +12,8 @@ class Ficha {
         this.turno=turno;
         this.valor=valor;
         this.ubicada=false;
-
         this.img = img;
+        this.jugador= jugador;
     }
 
     draw() {
