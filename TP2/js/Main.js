@@ -120,8 +120,8 @@ menuConfig.addEventListener("submit", (e) => {
     const tablero = instanciarTablero(lineaSeleccionada);
 
     fondoImage = new Image();
-    //fondoImage.src = '../img/fondo-tablero.jpg';
-    fondoImage.src = "https://s2.best-wallpaper.net/wallpaper/1920x1080/1307/Plants-vs-Zombies-2_1920x1080.jpg";
+    fondoImage.src = '../img/fondo-tablero.jpg';
+    //fondoImage.src = "https://s2.best-wallpaper.net/wallpaper/1920x1080/1307/Plants-vs-Zombies-2_1920x1080.jpg";
 
     fondoImage.onload = () => {
         tablero.dibujarTablero(fondoImage);
