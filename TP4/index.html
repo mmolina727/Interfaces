@@ -7,17 +7,37 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="navbar-content">
-        <div class="menu-hamb" onclick="toggleMenu()">
-            <img src="./img/menu-hamb.png" alt="Menú">
+    <div id="loading">
+        <div class="loader-container">
+            <div class="numeros">0</div>
+            <span class="runner"></span>
         </div>
-        <div class="logo">
-            <img src="./img/logo.png" alt="Logo">
+    </div>
+
+    <div id="wrapper" style="display: none;">
+
+        <header id="header" class="navbar-content">
+            <div class="menu-hamb" onclick="toggleMenu()">
+                <img src="./img/menu-hamb.png" alt="Menú">
+            </div>
+            <div class="logo">
+                <img src="./img/tituloPrincipal.png" alt="titulo de la pagina">
+            </div>
+            <div class="buy-button">
+                <button class="boton">COMPRAR</button>
+            </div>
+        </header>
+
+        <div>
+            <h1>Conoce a Spidey y sus sorprendentes amigos</h1>
+            <p>Spidey, nuestro lanzador de telarañas favorito se une a Ghost-Spider (Gwen Stacey) y
+                Miles Morales para formar el equipo de Spidey, con la ayuda del cómico pero leal robot de
+                Spidey, TRACE-E. Si Spidey se encuentra en una situación difícil donde necesita aún más
+                poder de superhéroe, tengan la seguridad de que un amigo de los Vengadores correrá para ayudar.
+            </p>
+            <img src="./img/duendeVerde.png" alt="duende verde">
         </div>
-        <div class="buy-button">
-            <button>Comprar</button>
-        </div>
-    </header>
+    </div>
     <script src="./js/main.js"></script>
 </body>
 </html>
