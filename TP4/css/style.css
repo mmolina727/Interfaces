@@ -5,5 +5,40 @@
 
 /*========== BARRA DE NAVEGACION ==========*/
 .navbar-content{
-   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(180deg, #5499F8 0%, #5499F8 87.91%, rgba(84, 153, 248, 0) 100%);
+    padding: 10px 20px;
+    color: #fff;
+}
+.menu-hamb {
+    cursor: pointer;
+}
+
+.menu-hamb img {
+    width: 34px;
+    height: 26px;
+}
+
+.logo {
+    flex: 1;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.buy-button {
+    text-align: left; /* Ajuste para colocar el botón a la izquierda */
+}
+
+.buy-button button {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 8px 16px;
+    cursor: pointer;
 }
