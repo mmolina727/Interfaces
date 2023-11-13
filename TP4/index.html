@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,100&family=Roboto:ital,wght@0,300;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div id="loading">
         <div class="loader-container">
@@ -16,17 +23,30 @@
 
     <div id="wrapper" style="display: none;">
 
-        <header id="header" class="navbar-content">
+         <header id="header" class="navbar-content">
             <div class="menu-hamb" onclick="toggleMenu()">
                 <img src="./img/menu-hamb.png" alt="Menú">
             </div>
-            <div class="logo">
+            <!-- <div class="logo">
                 <img src="./img/tituloPrincipal.png" alt="titulo de la pagina">
-            </div>
+            </div> -->
             <div class="buy-button">
                 <button class="boton">COMPRAR</button>
             </div>
-        </header>
+        </header> 
+
+        <div class="parallax-container">
+            <div class="parallax-layer layer-bg"></div>
+            <div class="parallax-layer layer-building1"></div>
+            <div class="parallax-layer layer-building2"></div>
+            <div class="parallax-layer layer-building3"></div>
+            <div class="parallax-layer layer-character1"></div>
+            <div class="parallax-layer layer-character2"></div>
+            <div class="parallax-layer layer-character3"></div>
+            <div class="parallax-layer layer-title"></div>
+            <div class="parallax-layer layer-web1"></div>
+            <div class="parallax-layer layer-web2"></div>
+        </div>
 
         <div>
             <h1>Conoce a Spidey y sus sorprendentes amigos</h1>
@@ -40,4 +60,5 @@
     </div>
     <script src="./js/main.js"></script>
 </body>
+
 </html>
