@@ -3,16 +3,17 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'lato';
+    font-family: var(--font);
 }
 /* Si necesitas que el cargador vaya más rápido o más lento, este es el lugar para cambiar. 
 No olvides actualizar 'time' en el javascript */
 :root {
     --time: 5s;
-    --color-start: #5499F8;
-    /* Color celeste */
-    --color-end: #FFD700;
-    /* Color amarillo */
+    --font: 'Lato';
+    --celeste: #5499F8;    
+    --amarillo: #FFD700;    
+    --violeta: #8F6AA6; 
+    --azul-oscuro :#02187E;  /*letra boton y sombra */
 }
 
 /*========== LOADER ==========*/
@@ -38,7 +39,7 @@ No olvides actualizar 'time' en el javascript */
     left: 50%;
     margin-top: -3px;
     margin-left: -300px;
-    background-color: var(--color-end);
+    background-color: var(--amarillo);
     background-image: linear-gradient(180deg, #5499F8 0%, #5499F8 87.91%, rgba(84, 153, 248, 0) 100%);
     box-shadow: inset 0 -2px 2px rgba(0, 0, 0, .4);
     border-radius: 3px 0 0 3px;
@@ -68,8 +69,8 @@ No olvides actualizar 'time' en el javascript */
     right: 0;
     height: 100%;
     width: 0%;
-    background-color: var(--color-end);  
-    background-image: linear-gradient(top, var(--color-start), var(--color-end));      
+    background-color: var(--amarillo);  
+    background-image: linear-gradient(top, var(--celeste), var(--amarillo));      
     animation: loader var(--time) linear;
 }
 
@@ -110,109 +111,67 @@ No olvides actualizar 'time' en el javascript */
 }
 
 /*========== BARRA DE NAVEGACION ==========*/
-/*
-.logo {
-    margin-top: 90px;
-    max-width: 100%;
-    transition: max-width 0.3s;
-}
 
-.sticky .menu-hamb,
-.sticky .buy-button {
-    margin-top: 5px;
-    /* Ajusta según la nueva posición del menú y el botón en modo sticky */
-/* } */
-/* 
-.sticky {
-    position: fixed;
-    background-color: #2980b9;    /* Color de fondo del header cuando es sticky */
-  /* 
-    width: 100%; 
-    top: 0;
-    z-index: 1000;   /* Asegura que el header esté sobre otros elementos */
-    /*
-    height: 103px;
-    flex-shrink: 0;
-}
-.sticky .logo{
-    margin-top: 0;
-    margin-left: 10px; /* Ajusta según la posición horizontal deseada */
-    /*
-}
-.sticky-logo {
-    /* max-width: 70px; Ancho máximo del logo cuando es sticky */
-    /*
-    width: 133px;
-    height: 68px;
-    flex-shrink: 0;
-}
-
-.menu-hamb,
-.buy-button {
-    margin-top: -300px;    /* Ajusta según la nueva posición del menú y el botón */
-    /*
-    margin-left: 100px;
-    margin-right: 100px;
-    
-} */
 
 /*-------------*/
-header.navbar-content {
+header {
     height: 103px;
+    z-index: 10;
+    background: linear-gradient(180deg, #5499F8 0%, #5499F8 67.91%, rgba(84, 153, 248, 0.00) 100%);
+}
+header .navbar-content{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color:  #5499F8;
-    /* background: linear-gradient(180deg, #5499F8 0%, #5499F8 87.91%, rgba(84, 153, 248, 0) 100%); */
-    padding: 10px 20px;
-    
+    justify-content: space-between;
+    padding-top: 10px;
 }
 
-header.menu-hamb {
+header .navbar-content button{
+    width: 200px;
+    height: 50px;
+}
+/*========== BOTONES ==========*/
+.buy-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 200px;
+    height: 50px;
+    flex-shrink: 0;    
+    border-radius: 111px;
+    border: 8px solid var(--2982-ff, #2982FF);
+    background: var(--amarillo);
+    box-shadow: 4px 5px 0px 0px var(--azul-oscuro);    
     cursor: pointer;
 }
 
-header.menu-hamb img {
-    width: 34px;
-    height: 26px;
-}
-
-.logo {
-    flex: 1;
-    text-align: center;
-}
-
-.logo img {
-    max-width: 100%;
-    height: auto;
-}
-
-.buy-button button.boton {
-    width: 200px;
-    height: 50px;
-    flex-shrink: 0;
-    color: #02187E;
-    font-family: 'Lato', sans-serif;
+.txt-btn{
+    color: var(--azul-oscuro);
     font-size: 20px;
     font-style: normal;
-    /* font-weight: 900; */
     font-weight: bold;
     line-height: 19px;
     letter-spacing: 2.2px;
-    border-radius: 111px;
-    border: 8px solid var(--2982-ff, #2982FF);
-    background: #FFE901;
-    box-shadow: 4px 5px 0px 0px #02187E;
-    -webkit-text-stroke: 1.5px #02187E;
-    cursor: pointer;
+    -webkit-text-stroke: 1.5px var(--azul-oscuro);
+}
 
+.menu-hamb {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+/*MIRAR LO DEL TAMAÑO DE LA PANTALLA*/
+
+#wrapper{
+    width: 1080px;
+    margin: auto; 
 }
 
 /*========== PRIMER PARALLAX ===========*/
-.parallax-container {
+.parallax-section1 {
     width: 100%;
-    height: 720px;
-    
+    height: 720px;    
     perspective: 1px;
     perspective-origin: 0 0;
     background-image: url('../img/seccion1/fondo1.png');
@@ -305,7 +264,7 @@ header.menu-hamb img {
     transform: translateZ(-6px) scale(7);  
     background-size: auto;
     top: 340%; 
-    left: 450%; 
+    left: 480%; 
     position: absolute;
 }
 .layer-web1 { 
@@ -324,30 +283,9 @@ header.menu-hamb img {
     transform: translateZ(-10px) scale(9);  
     background-size: 30% 30%; 
     top: 645%; 
-    left: 980%; 
+    left: 1015%; 
     position: absolute;
 } 
-
-.menu-hamb {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    cursor: pointer;
-}
-
-.buy-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-.logo {
-    position: absolute;
-    top: 100px; /* Ajusta según sea necesario */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1; /* Para que esté sobre los edificios y personajes */
-}
 
 
 /*========== PRIMER PARALLAX ===========*/
@@ -385,7 +323,7 @@ header.menu-hamb img {
 
 .juego-seccion2 {
     position: absolute;
-    left: 0;
+    left: -1.5%;
     top: 520px; 
 }
 
@@ -416,3 +354,88 @@ div.parallax-content {
 }
 
 /*======== parallax 3 o Seccion 3 ========*/
+
+.section3 {
+    width: 1080px;
+    margin: auto;
+    background-color: white;
+    width: 100%;
+    height: 1085px;
+    margin-top: 610px;
+    z-index: 1;
+}
+
+.container2 {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 370px; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.container2 img {
+  width: 30%; /* Establece un ancho en porcentaje para cada imagen */
+  max-height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+}
+
+.rowImg {
+  flex: 1; /* Distribuye el espacio de manera equitativa entre las imágenes */
+  max-width: 30%;
+}
+
+.rowImg img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+/*MIRAR SI ANDA 
+
+/*
+.logo {
+    margin-top: 90px;
+    max-width: 100%;
+    transition: max-width 0.3s;
+}
+
+.sticky .menu-hamb,
+.sticky .buy-button {
+    margin-top: 5px;
+    /* Ajusta según la nueva posición del menú y el botón en modo sticky */
+/* } */
+/* 
+.sticky {
+    position: fixed;
+    background-color: #2980b9;    /* Color de fondo del header cuando es sticky */
+  /* 
+    width: 100%; 
+    top: 0;
+    z-index: 1000;   /* Asegura que el header esté sobre otros elementos */
+    /*
+    height: 103px;
+    flex-shrink: 0;
+}
+.sticky .logo{
+    margin-top: 0;
+    margin-left: 10px; /* Ajusta según la posición horizontal deseada */
+    /*
+}
+.sticky-logo {
+    /* max-width: 70px; Ancho máximo del logo cuando es sticky */
+    /*
+    width: 133px;
+    height: 68px;
+    flex-shrink: 0;
+}
+
+.menu-hamb,
+.buy-button {
+    margin-top: -300px;    /* Ajusta según la nueva posición del menú y el botón */
+    /*
+    margin-left: 100px;
+    margin-right: 100px;
+    
+} */
