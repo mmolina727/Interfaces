@@ -4,148 +4,63 @@
     margin: 0;
     padding: 0;
     font-family: var(--font);
+    box-sizing: border-box;
 }
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 /* Si necesitas que el cargador vaya más rápido o más lento, este es el lugar para cambiar. 
 No olvides actualizar 'time' en el javascript */
 :root {
     --time: 5s;
     --font: 'Lato';
-    --celeste: #5499F8;    
-    --amarillo: #FFD700;    
-    --violeta: #8F6AA6; 
-    --azul-oscuro :#02187E;  /*letra boton y sombra */
+    --celeste: #5499F8;
+    --amarillo: #FFD700;
+    --violeta: #8F6AA6;
+    --azul-oscuro: #02187E;
+    /*letra boton y sombra */
 }
 
 /*========== LOADER ==========*/
 
-#loading {
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.loader-container {
-    height: 6px;
-    width: 600px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -3px;
-    margin-left: -300px;
-    background-color: var(--amarillo);
-    background-image: linear-gradient(180deg, #5499F8 0%, #5499F8 87.91%, rgba(84, 153, 248, 0) 100%);
-    box-shadow: inset 0 -2px 2px rgba(0, 0, 0, .4);
-    border-radius: 3px 0 0 3px;
-
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        width: 1em;
-        height: 1em;
-        border-radius: 50%;
-        margin-top: -0.5em;
-        margin-right: -1em;
-        background-image: linear-gradient(top, rgb(0, 0, 0), rgb(33, 33, 33));
-    }
-
-    &.done:after {
-        background: Red;
-    }
-}
-
-.runner {
-    content: "";
-    position: absolute;
-    right: 0;
-    height: 100%;
-    width: 0%;
-    background-color: var(--amarillo);  
-    background-image: linear-gradient(top, var(--celeste), var(--amarillo));      
-    animation: loader var(--time) linear;
-}
-
-.numeros {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 2em;
-    margin-top: .3em;
-    color: rgb(5, 5, 5);
-    animation: numeros var(--time) linear;
-    text-shadow: 0 -1px 0 #333;
-
-    &:after {
-        content: "%";
-    }
-}
-
-@keyframes loader {
-    0% {
-        width: 100%
-    }
-
-    100% {
-        width: 0%;
-    }
-}
-
-@keyframes numeros {
-    0% {
-        color: rgb(91, 216, 255);
-    }
-
-    100% {
-        color: #ff0000;
-    }
-
-}
-
 /*========== BARRA DE NAVEGACION ==========*/
-
-
-/*-------------*/
 header {
-    height: 103px;
+    height: 227px;
     z-index: 10;
     background: linear-gradient(180deg, #5499F8 0%, #5499F8 67.91%, rgba(84, 153, 248, 0.00) 100%);
 }
-header .navbar-content{
+
+header .navbar-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 10px;
 }
 
-header .navbar-content button{
+header .navbar-content button {
     width: 200px;
     height: 50px;
 }
-/*========== BOTONES ==========*/
+
+/*========= BOTONES ========*/
 .buy-button {
     position: absolute;
     top: 10px;
     right: 10px;
     width: 200px;
     height: 50px;
-    flex-shrink: 0;    
+    flex-shrink: 0;
     border-radius: 111px;
     border: 8px solid var(--2982-ff, #2982FF);
     background: var(--amarillo);
-    box-shadow: 4px 5px 0px 0px var(--azul-oscuro);    
+    box-shadow: 4px 5px 0px 0px var(--azul-oscuro);
     cursor: pointer;
 }
 
-.txt-btn{
+.txt-btn {
     color: var(--azul-oscuro);
     font-size: 20px;
     font-style: normal;
@@ -161,281 +76,202 @@ header .navbar-content button{
     left: 10px;
     cursor: pointer;
 }
+
 /*MIRAR LO DEL TAMAÑO DE LA PANTALLA*/
-
-#wrapper{
+.widthReducido {
     width: 1080px;
-    margin: auto; 
+    margin: auto;
 }
 
 /*========== PRIMER PARALLAX ===========*/
-.parallax-section1 {
+.section1 {
+    display: flex;
+    position: relative;
     width: 100%;
-    height: 720px;    
-    perspective: 1px;
-    perspective-origin: 0 0;
-    background-image: url('../img/seccion1/fondo1.png');
+    height: 720px;
     background-repeat: no-repeat;
-    background-size: 100% 100%; /* Ajuste para cubrir toda la pantalla */
-    background-attachment: fixed; /* Fija el fondo mientras se desplaza la página */
-}
-
-.parallax-layer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    will-change: transform;
     background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    /* Ajuste para cubrir toda la pantalla */
+    /* background-attachment: fixed;  Fija el fondo mientras se desplaza la página */
+    margin-top: -70px;
+    perspective-origin: 0 0;
 }
 
-/* .layer-bg { background-image: url('../img/fondo1.png'); z-index: -10; transform: translateZ(-1px) scale(2); background-size: cover; } */
+.section1 .title {
+    position: absolute;
+    width: 590px;
+    height: 301px;
+    top: -90px;
+    left: 30%;
 
-.layer-title {
-    background-image: url('../img/seccion1/tituloPrincipal.png');
-    z-index: -9;
-    transform: translateZ(-8px) scale(9);
-    background-size: auto; /* Ajuste para mantener el tamaño original */
-    top: 100px; /* Coloca la imagen en la mitad vertical del contenedor */
-    left: 50%; /* Centra la imagen horizontalmente */
-    transform: translate(-50%, -50%); /* Corrige la posición centrada */
-    position: absolute; /* Asegura que el posicionamiento sea absoluto */
 }
 
-.layer-building1 { 
-    background-image: url('../img/seccion1/edificio1.png'); 
-    z-index: -8; 
-    transform: translateZ(-2px) scale(3); 
-    background-size: auto; 
-    top: 760px; /* Posición en la parte inferior */
-    left: -95px; /* Contra el lado izquierdo */
-    position: absolute; /* Asegura que el posicionamiento sea absoluto */
+/* .section1 .building1 {
+    position: absolute;
+    height: 720px;
+    left: -50px;
+    width: 452px;
 }
 
-.layer-building2 { 
-    background-image: url('../img/seccion1/edificio2.png'); 
-    z-index: -7; 
-    transform: translateZ(-2px) scale(3); 
-    background-size: auto; 
-    top: 250px; 
-    bottom: 0; 
-    left: 53%; 
-    transform: translateX(-50%); /* Centra horizontalmente */
-    position: absolute; /* Asegura que el posicionamiento sea absoluto */
-}
+.section1 .building2 {
+    width: 543.5px;
+    height: 213.5px;
+    bottom: 2%;
+    left: 30.5%;
+    position: absolute;
+    /* Asegura que el posicionamiento sea absoluto */
+/*
 
-.layer-building3 { 
-    background-image: url('../img/seccion1/edificio3.png'); 
-    z-index: -6; 
-    transform: translateZ(-2px) scale(3); 
-    background-size: auto;
-    top: 2px;   
-    bottom: 0; /* Coloca la parte inferior de la imagen en la parte inferior del contenedor */
-    left: 85%; /* Posiciona el punto medio de la imagen en el centro horizontal del contenedor */
-    transform: translateX(-50%); /* Ajusta la posición horizontal para centrar la imagen */
-    position: absolute; /* Asegura que el posicionamiento sea absoluto */
-}
+.section1 .building3 {
+    position: absolute;
+    /* Asegura que el posicionamiento sea absoluto */
+    /* width: 374px;
+    height: 727.5px;
+    bottom: 1%; */
+    /* Coloca la parte inferior de la imagen en la parte inferior del contenedor */
+    /* left: 71%; */
+    /* Posiciona el punto medio de la imagen en el centro horizontal del contenedor */
 
-.layer-character1 { 
-    background-image: url('../img/seccion1/gwen1.png'); 
-    z-index: -5; 
-    transform: translateZ(-6px) scale(7); 
-    background-size: auto;
+.section1 .edificios{
+    position: absolute;
+    left: -4%;
+    z-index: 1;
+}
+.section1 .character1 {
+    width: 360px;
+    height: 444px;
+    position: absolute;    /* Asegura que el posicionamiento sea absoluto */
+    z-index: 1;
     bottom: 10px;
-    top: 420%; /* Ajusta según sea necesario para la posición vertical */
-    left: 100%; /* Coloca la imagen en el lado izquierdo del contenedor */
-    position: absolute; /* Asegura que el posicionamiento sea absoluto */
-}
-.layer-character2 { 
-    background-image: url('../img/seccion1/spidey1.png'); 
-    z-index: -4; 
-    transform: translateZ(-6px) scale(7);  
-    background-size: auto;
-    top: 440%; 
-    left: 310%; 
-    position: absolute; /* Asegura que el posicionamiento sea absoluto */
-}
-.layer-character3 { 
-    background-image: url('../img/seccion1/miles1.png'); 
-    z-index: -3; 
-    transform: translateZ(-6px) scale(7);  
-    background-size: auto;
-    top: 340%; 
-    left: 480%; 
-    position: absolute;
-}
-.layer-web1 { 
-    background-image: url('../img/seccion1/telaraña1.png'); 
-    z-index: -2; 
-    transform: translateZ(-9px) scale(10); 
-    background-size: auto;
-    top: 760%; 
-    left: 110%; 
-    position: absolute;
+    top: 270px;    /* Ajusta según sea necesario para la posición vertical */
+    left: 90px;     /* Coloca la imagen en el lado izquierdo del contenedor */
 }
 
-.layer-web2 { 
-    background-image: url('../img/seccion1/telaraña2.png'); 
-    z-index: -1; 
-    transform: translateZ(-10px) scale(9);  
-    background-size: 30% 30%; 
-    top: 645%; 
-    left: 1015%; 
+.section1 .character2 {
+    width: 465px;
+    height: 465px;
+    position: absolute;    /* Asegura que el posicionamiento sea absoluto */
+    z-index: 10;
+    bottom: 10px;
+    top: 39%;    /* Ajusta según sea necesario para la posición vertical */
+    left: 32%;     /* Coloca la imagen en el lado izquierdo del contenedor */
+}
+
+.section1 .character3 {
+    top: 30%;
+    right: 14.5%;
     position: absolute;
-} 
+    width: 393px;
+    height: 393px;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.section1 .web1 {
+    position: absolute;
+    z-index: 10;
+    top: 35.5%;
+    left: -14%;
+    flex-shrink: 0;
+}
+
+.section1 .web2 {
+    top: 37%;
+    left: 77%;
+    position: absolute;
+    z-index: 10;
+}
 
 
-/*========== PRIMER PARALLAX ===========*/
-.parallax-section2{
+/*======== parallax 2 ========*/
+.section2 {
+    position: relative;
+    z-index: 1;
     width: 100%;
-    position: absolute;
     height: 924.5px;
     background-image: url(../img/seccion2/RectanglePurple.png);
-    background-size: auto;
+    background-size: 100% 90%;
     background-repeat: no-repeat;
-    z-index: 2;
-    margin-top: -80px;
+    margin-top: -55px;
 }
 
-.parallax-layer2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.section2 .conteiner {
+    position: relative;
 }
 
-.parallax-section2 .conteiner {
-   position: relative;
+.section2 .parallax-seccion2{
+    position: relative;
 }
 
 .duendeVerde {
     position: absolute;
-    right: -100px;
-    top: 140px;   
+    right: -20px;
+    top: 140px;
 }
 
 .juego-seccion2 {
     position: absolute;
-    left: -1.5%;
-    top: 520px; 
+    left: 90px;
+    top: 520px;
 }
 
-div.parallax-content {
+.section2 .content {
     position: absolute;
-    top: 200px;
-    left: 5%;
+    top: 190px;
+    left: 7%;
     z-index: 3;
-    transform: skewY(1deg);
     padding: 20px;
     width: 646px;
-    color: white;
+    color: white; 
 }
 
-.parallax-content h1 {
-    margin-bottom: 10px;
+.section2 .content h1 {
+    margin-bottom: 24px;
     font-size: 60px;
     font-style: normal;
     font-weight: 600;
     line-height: 94.5%;
 }
 
-.parallax-content p {
+.section2 .content p {
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    width: 586px;
+    height: 154px;
 }
 
 /*======== parallax 3 o Seccion 3 ========*/
 
 .section3 {
-    width: 1080px;
-    margin: auto;
     background-color: white;
     width: 100%;
     height: 1085px;
-    margin-top: 610px;
+    margin-top: -210px;
     z-index: 1;
 }
 
-.container2 {
+.container3 {
     margin-left: 100px;
     margin-right: 100px;
-    padding-top: 370px; 
+    padding-top: 370px;    /*agrande el padding xq al poner margin negativo se subia el contenido*/
     display: flex;
     justify-content: space-between;
 }
 
-.container2 img {
-  width: 30%; /* Establece un ancho en porcentaje para cada imagen */
-  max-height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+.container3 img {
+    width: 30%;    /* Establece un ancho en porcentaje para cada imagen */
+    max-height: auto;    /* Ajusta la altura automáticamente para mantener la proporción */
 }
 
-.rowImg {
-  flex: 1; /* Distribuye el espacio de manera equitativa entre las imágenes */
-  max-width: 30%;
+.img-container {
+    flex: 1;    /* Distribuye el espacio de manera equitativa entre las imágenes */
+    max-width: 30%;
 }
 
-.rowImg img {
-  width: 100%;
-  height: auto;
+.img-container img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 23px;
 }
-
-
-
-
-
-/*MIRAR SI ANDA 
-
-/*
-.logo {
-    margin-top: 90px;
-    max-width: 100%;
-    transition: max-width 0.3s;
-}
-
-.sticky .menu-hamb,
-.sticky .buy-button {
-    margin-top: 5px;
-    /* Ajusta según la nueva posición del menú y el botón en modo sticky */
-/* } */
-/* 
-.sticky {
-    position: fixed;
-    background-color: #2980b9;    /* Color de fondo del header cuando es sticky */
-  /* 
-    width: 100%; 
-    top: 0;
-    z-index: 1000;   /* Asegura que el header esté sobre otros elementos */
-    /*
-    height: 103px;
-    flex-shrink: 0;
-}
-.sticky .logo{
-    margin-top: 0;
-    margin-left: 10px; /* Ajusta según la posición horizontal deseada */
-    /*
-}
-.sticky-logo {
-    /* max-width: 70px; Ancho máximo del logo cuando es sticky */
-    /*
-    width: 133px;
-    height: 68px;
-    flex-shrink: 0;
-}
-
-.menu-hamb,
-.buy-button {
-    margin-top: -300px;    /* Ajusta según la nueva posición del menú y el botón */
-    /*
-    margin-left: 100px;
-    margin-right: 100px;
-    
-} */
