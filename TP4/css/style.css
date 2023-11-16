@@ -374,7 +374,7 @@ header .container1080 button {
 
 /*======== Seccion 6 ========*/
 .section6{
-    background-image: url(../img/seccion8/Rectangle9.png);
+    background-image: url(../img/seccion7/Rectangle9.png);
     height: 2194.5px;
     margin-top: -50px;
     background-size: auto;
@@ -430,7 +430,7 @@ header .container1080 button {
 /*======== Seccion 7 ========*/
 .section7{
     height: 719.861px;
-    background-image: url(../img/seccion8/Rectangle10.png);
+    background-image: url(../img/seccion7/Rectangle10.png);
     padding-bottom: 67px;
     position: relative;
 }
@@ -439,10 +439,51 @@ header .container1080 button {
 }
 .section7 .container1080 img{
     height: auto;
-    margin-top: 100px;
-    width: 400px;
+    margin-top: 150px;  
+    position: absolute;  
+}
+.section7 .gwenStacy{
+    margin-left: 10%;
+}
+.section7 .peterParker{
+    margin-left: 30%;
+}
+.section7 .milesMorales{
+ margin-left: 65%;
 }
 
+/*======== Seccion 8 ========*/
+.section8{
+    background-image: url(../img/seccion8/s7-fondo.png);
+    position: relative;
+    height: 1296px;
+}
+.section8 .seccion8-edificios{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.section8 h1{
+    width: 816px;
+    color: #000;
+    text-align: center;
+    font-family: Lato;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 94.5%; /* 56.7px */
+    margin-top: 150px;
+}
+.section8 input{
+    color: var(--grey);
+    letter-spacing: 2.2px;
+}
+.section8 .container1080{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 /*======FOOTER==========*/
 footer{
