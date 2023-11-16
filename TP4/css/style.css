@@ -10,6 +10,7 @@
 body {
     width: 100%;
     overflow-x: hidden;
+    background-color: black;
 }
 
 /* Si necesitas que el cargador vaya más rápido o más lento, este es el lugar para cambiar. 
@@ -78,7 +79,7 @@ header .navbar-content button {
 }
 
 /*MIRAR LO DEL TAMAÑO DE LA PANTALLA*/
-.widthReducido {
+.container {
     width: 1080px;
     margin: auto;
 }
@@ -205,20 +206,20 @@ header .navbar-content button {
 
 .duendeVerde {
     position: absolute;
-    right: -20px;
+    right: -90px;
     top: 140px;
 }
 
 .juego-seccion2 {
     position: absolute;
-    left: 90px;
+    left: -15px;
     top: 520px;
 }
 
 .section2 .content {
     position: absolute;
     top: 190px;
-    left: 7%;
+    left: -20px;
     z-index: 3;
     padding: 20px;
     width: 646px;
@@ -264,7 +265,15 @@ header .navbar-content button {
     width: 30%;    /* Establece un ancho en porcentaje para cada imagen */
     max-height: auto;    /* Ajusta la altura automáticamente para mantener la proporción */
 }
+.container3 p {
+    color: #000;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 
+}
 .img-container {
     flex: 1;    /* Distribuye el espacio de manera equitativa entre las imágenes */
     max-width: 30%;
@@ -275,3 +284,95 @@ header .navbar-content button {
     height: auto;
     margin-bottom: 23px;
 }
+
+/*======== Seccion 4 ========*/
+
+.section4{
+    width: 100%;    
+    height: 566px;
+    background-image: url(../img/seccion4/fondoSec4.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: -70px;
+}
+.section4 .img1{
+    position: absolute;
+    width: 546.108px;
+    height: 326.509px;
+    flex-shrink: 0;
+    margin-top: -160px;
+    left: 45px;
+}
+
+.section4 .img2{
+    width: 543.218px;
+    height: 325.787px;
+    flex-shrink: 0;
+    position: absolute;
+    left: 30px;
+    margin-top: -20px;
+}
+
+.section4 .img3{
+    width: 546.108px;
+    height: 326.509px;
+    position: absolute;
+    left: 60px;
+    margin-top: 169px;
+}
+
+/*======== Seccion 5 ========*/
+
+.section5{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -90px; 
+    height: 1000px;   
+}
+
+.section5 .container h1{
+    width: 667px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 94.5%;
+    margin-top: -342px;
+    margin-bottom: 50px;
+}
+
+.parallax-seccion5{
+    position: relative;
+}
+
+.parallax-seccion5 img {
+    position: absolute;
+}
+
+.parallax-seccion5 .cielo{
+    width: 1077.059px;
+    height: 527.626px;
+}
+
+.parallax-seccion5 .small-plants{
+    z-index: 1;
+}
+
+.parallax-seccion5 .msMarvel{    
+    left: 30px;
+    top: -95px;    
+}
+
+.parallax-seccion5 .blackPanter{
+    left: 455px;
+    top: -250px;
+    transform: rotate(4deg);
+}
+
+.section5 .hulk{
+    right: -55px;
+    margin-top: 110px;
+}
+
+/*======== Seccion 6 ========*/
