@@ -421,3 +421,54 @@ header .navbar-content button {
 .mini-seccion-negra{
     height: 250px;
 }
+
+/*======FOOTER==========*/
+footer{
+    width: 100%;
+    height: 673px;
+    background-color: #5E5E5D;
+}
+
+.plataforms-container{
+    width: 100%;
+    height: 75px;
+    background-color: #242424;
+}
+
+.plataforms{
+    width: 1080px;
+    height: 75px;
+    margin: auto;
+}
+
+.plataforms img{
+    width: 100%;
+    height: 100%;
+}
+
+.information-container{
+    width: 1080px;
+    height: 361px;
+    margin: auto;
+    margin-top: 38px;
+}
+
+.information-container .font-footer{
+    width: 820px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 94.5%;
+    letter-spacing: 2.2px;
+    text-decoration-line: underline;
+}
+
+.cookies{
+    margin-top: 20px;
+}
+
+.social{
+    margin-top: 38px;
+}
