@@ -193,7 +193,7 @@ header .navbar-content button {
     background-image: url(../img/seccion2/RectanglePurple.png);
     background-size: 100% 90%;
     background-repeat: no-repeat;
-    margin-top: -55px;
+    margin-top: -50px;
 }
 
 .section2 .conteiner {
@@ -206,13 +206,13 @@ header .navbar-content button {
 
 .duendeVerde {
     position: absolute;
-    right: -90px;
+    right: 0;
     top: 140px;
 }
 
 .juego-seccion2 {
     position: absolute;
-    left: -15px;
+    left: 95px;
     top: 520px;
 }
 
@@ -376,3 +376,48 @@ header .navbar-content button {
 }
 
 /*======== Seccion 6 ========*/
+.section6{
+    background-color: white;
+}
+.section6 .container h1{
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 94.5%; /* 56.7px */
+    padding-top: 100px;
+}
+.seccion6-contenedor{
+    position: sticky;
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 25px;
+
+}
+.img-sec6{
+    position: sticky;
+    margin-right: 50px;
+}
+.seccion6-txt{
+    width: 467px;
+}
+.seccion6-txt h3{
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 94.5%; /* 37.8px */
+    padding-bottom: 20px;
+}
+.seccion6-txt p{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 94.5%; /* 18.9px */
+}
+
+/*======== mini seccion negra========*/
+.mini-seccion-negra h1{
+    color: #FFF;
+}
+.mini-seccion-negra{
+    height: 250px;
+}
