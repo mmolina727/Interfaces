@@ -44,6 +44,7 @@ header .container1080 {
 header .container1080 button {
     width: 200px;
     height: 50px;
+    margin-top: 20px;
 }
 
 /*========= BOTONES ========*/
@@ -69,8 +70,8 @@ header .container1080 button {
 
 .menu-hamb {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 100px;
     cursor: pointer;
 }
 
@@ -98,8 +99,8 @@ header .container1080 button {
     position: absolute;
     width: 590px;
     height: 301px;
-    top: -90px;
-    left: 30%;
+    top: -48px;
+    left: 25%;
 
 }
 
@@ -451,6 +452,60 @@ header .container1080 button {
 .section7 .milesMorales{
  margin-left: 65%;
 }
+/*========= cards ==========*/
+.card-seccion7{
+    border: 1px white solid;
+    width: 1280px;
+    height: 832px;
+    background-color: rgb(15, 15, 15);
+    position: absolute;
+    align-items: center;
+    
+    display: flex;
+}
+
+div.card-seccion7 .close{    
+    position: absolute;
+    cursor: pointer;
+    width: 89px;
+    height: 89px;
+    left: 1080px;
+    margin-top: -711px;
+    right: 35px;
+}
+.card-seccion7 > img{
+    width: 284px;
+    height: 715px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.txt-card{
+    color: white;
+    width: 724px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.txt-card h2{
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+ol {
+    margin-left: 20px; /* Ajusta el margen izquierdo de la lista */
+    padding-left: 20px; /* Ajusta el relleno izquierdo de la lista */
+}
+
+/* Estilos para los elementos de lista */
+li {
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+}
+
+
 
 /*======== Seccion 8 ========*/
 .section8{
@@ -474,15 +529,68 @@ header .container1080 button {
     line-height: 94.5%; /* 56.7px */
     margin-top: 150px;
 }
-.section8 input{
-    color: var(--grey);
+.suscripcion input{
     letter-spacing: 2.2px;
+    padding-left: 60px;
+    font-size: 20px;
+    width: 562px;
+    height: 100px;
+    border-radius: 50px 0px 0px 50px;
+    border-top: 9px solid #2982FF;
+    border-bottom: 9px solid #2982FF;
+    border-left: 9px solid #2982FF;
+    background: #FFF;
+    margin-right: -10px;
+
+    /* Drop Shadow */
+    box-shadow: 4px 5px 0px 0px #02187E;
+}
+
+.suscripcion button{
+    width: 218px;
+    height: 100px;
+    border-radius: 0px 50px 50px 0px;
+    border: 9px solid #2982FF;
+    background: #FFE901;
+
+    /* Drop Shadow */
+    box-shadow: 4px 5px 0px 0px #02187E;
+}
+.section8 p{
+    width: 578px;
+    height: 95px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 94.5%; /* 18.9px */
+    margin-left: -60px;
+}
+.section8 p span{
+    text-decoration-line: underline;
+}
+.suscripcion{
+    margin-bottom: 40px; /*pongo espacio entre el input y el parrafo*/
+}
+
+.suscripcion input[type="text"],
+.suscripcion button {
+    display: flex;
+    display: inline-block; /* Para que el input y el botón se muestren en la misma línea */
+    vertical-align: middle; /* Alinear verticalmente al centro */
+    margin-top: 45px;
+    
 }
 .section8 .container1080{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.section8 .teen{
+    width: 231px;
+    height: 145px;
+    margin-left: -318px;
+    margin-top: 15px;
 }
 
 /*======FOOTER==========*/
