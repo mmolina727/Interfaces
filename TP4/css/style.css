@@ -13,6 +13,20 @@ body {
     background-color: black;
 }
 
+.desplegar {
+    transform: translateX(-200%);
+}
+
+.desplegable{
+    width: 100px;
+    height: 100px;
+    border: solid 1px black;
+    position: absolute;
+    top:7%;
+    right: 90%;
+    transition: 0.4s;
+}
+
 /* Si necesitas que el cargador vaya más rápido o más lento, este es el lugar para cambiar. 
 No olvides actualizar 'time' en el javascript */
 :root {
@@ -73,6 +87,13 @@ header .container1080 button {
     top: 20px;
     left: 100px;
     cursor: pointer;
+    width: 46px;
+    height: 39px;
+}
+
+.menu-hamb img{
+    width: 100%;
+    height: 100%;
 }
 
 /*MIRAR LO DEL TAMAÑO DE LA PANTALLA*/
