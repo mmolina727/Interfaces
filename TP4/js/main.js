@@ -61,14 +61,24 @@ function showItemsWithDelay() {
     }, 100);
   });
   
-  /*******************************/
-  window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    const scrollPosition = window.scrollY;
+ /*****************************************/
+(function() {
+  const images = document.querySelectorAll(".parallax-seccion5 img");
 
-    if (scrollPosition > 0) {
-        header.classList.add('sticky');
-    } else {
-        header.classList.remove('sticky');
-    }
-});
+  document.addEventListener("mousemove", parallax);
+
+  function parallax(e) {
+      let _w = window.innerWidth / 2;
+      let _h = window.innerHeight / 2;
+
+      images.forEach((image, index) => {
+          let depth = (index + 1) * 0.1;
+          let _mouseX = e.clientX;
+          let _mouseY = e.clientY;
+          let moveX = (_mouseX - _w) * depth;
+          let moveY = (_mouseY - _h) * depth;
+
+          image.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+  }
+})();

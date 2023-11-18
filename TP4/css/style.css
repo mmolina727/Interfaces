@@ -25,7 +25,6 @@ No olvidar actualizar 'time' en el javascript */
     /*letra boton y sombra */
 }
 
-/*========== LOADER ==========*/
 
 /*========== BARRA DE NAVEGACION ==========*/
 /*#header.sticky{
@@ -424,14 +423,14 @@ header .container1080 button {
     position: absolute;
 }
 
-.parallax-seccion5 .cielo{
+/* .parallax-seccion5 .cielo{
     width: 1077.059px;
     height: 527.626px;
 }
 
 .parallax-seccion5 .small-plants{
     z-index: 1;
-}
+} */
 
 .parallax-seccion5 .msMarvel{    
     left: 30px;
@@ -666,7 +665,31 @@ li {
     margin-left: -318px;
     margin-top: 15px;
 }
-
+/************************/
+/* Animación del personaje */
+#spider-sheet {
+    /* Tamaño de la viñeta individual */
+    width:91px;
+    height:71px;
+    /* Cómo hay establecido un tamaño, centramos con margin:auto */
+    margin-left:-82px;  
+    /* Cargamos el sprite (el repeat-x se puede omitir, por defecto se repite) */
+    background:url(../img/seccion8/Group15.png) repeat-x;
+    /* Aplicamos la animación "walk": 0.8seg, 6 viñetas y repetimos infinitamente */
+    animation:walk .5s steps(3) infinite;
+    /* Posicionamos el personaje sobre el camino de madera */
+    position:relative;
+    bottom:-295px;    
+  }
+  
+  /* Animación de personaje caminando: Simplemente mueve el sprite sheet hacia la izquierda, realizando el movimiento. */
+  @keyframes walk {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0 }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:-213px }
+  }
+/************************/
 /*======FOOTER==========*/
 footer{
     width: 100%;
