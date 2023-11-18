@@ -8,6 +8,10 @@ let character2= document.getElementById("character2");
 let character3= document.getElementById("character3");
 let web1= document.getElementById("web1");
 let web2= document.getElementById("web2");
+let img1= document.getElementById("image1");
+let img2= document.getElementById("image2");
+let img3= document.getElementById("image3");
+
 
 
 window.addEventListener("scroll",()=>{
@@ -20,10 +24,13 @@ window.addEventListener("scroll",()=>{
   web1.style.top=(scrol+480)*0.20+"px";
   character3.style.top=(scrol+450)*0.23+"px";
   web2.style.top=(scrol+630)*0.23+"px";
-
-
-
-
+  img1.style.left=(scrol-2300)*0.13+"px";
+  if(scrol>2190){
+    img2.style.left=(scrol-1950)*0.13+"px";
+  }
+  if(scrol>2300){
+    img3.style.left=(scrol-1850)*0.13+"px";
+  }
 })
 
 burger.addEventListener("click",()=>{
