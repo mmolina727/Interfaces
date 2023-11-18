@@ -119,6 +119,7 @@ header .container1080 button {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+   
 }
 
 .desplegable li img {
@@ -130,13 +131,16 @@ header .container1080 button {
 .desplegable li p {
     margin: 0;
    font-size: 20px;
+    -webkit-text-stroke: 1px black; /* Borde de 1px de grosor en color negro */
+    text-shadow: 0 0 1px black;  
+    color: #FFD700;
 } 
 
 .desplegable ul li p:hover {
-    color: var(--amarillo);
+    color: var(--azul-oscuro);
 }
 .desplegable li:hover{
-    color: #FFE901;
+    color: var(--azul-oscuro);
 }
 .hidden {
     opacity: 0;
