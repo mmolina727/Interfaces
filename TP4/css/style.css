@@ -67,7 +67,16 @@ header .container1080 button {
     border: 8px solid var(--2982-ff, #2982FF);
     background: var(--amarillo);
     box-shadow: 4px 5px 0px 0px var(--azul-oscuro);
+    transition: transform 0.3s ease;
+    box-shadow: 4px 5px 0px 0px transparent; /* Sombra inicial */
+    transition: box-shadow 0.3s ease;
 }
+.buy-button:hover {
+    box-shadow: 4px 5px 0px 0px var(--azul-oscuro);
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+    
+}
+
 
 .txt-btn {
     color: var(--azul-oscuro);

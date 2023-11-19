@@ -20,10 +20,6 @@ window.addEventListener("scroll",()=>{
   web1.style.top=(scrol+480)*0.20+"px";
   character3.style.top=(scrol+450)*0.23+"px";
   web2.style.top=(scrol+630)*0.23+"px";
-
-
-
-
 })
 
 burger.addEventListener("click",()=>{
