@@ -404,6 +404,11 @@ header .container1080 button {
     margin-top: 169px;
 }
 
+.section4 img:hover{
+    transform: rotateZ(16deg);
+    transition: all 0.6s;
+}
+
 /*======== Seccion 5 ========*/
 
 .section5{
