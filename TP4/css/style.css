@@ -41,7 +41,7 @@ header {
     height: 130px;
     z-index: 10;
     background: #5499F8;
-    position: sticky;
+    position:sticky;
 }
 
 header .container1080 {
@@ -265,7 +265,7 @@ header .container1080 button {
 .section1 .web1 {
     position: absolute;
     z-index: 10;
-    top: 35.5%;
+    top: 14%;
     left: -14%;
     flex-shrink: 0;
 }
