@@ -36,13 +36,12 @@ No olvidar actualizar 'time' en el javascript */
     transition: height 0.3s ease;
 }*/
 
-#header.sticky .buy-button{
-    margin-bottom: 5px ;
-}
+
 header {
-    height: 220px;
+    height: 130px;
     z-index: 10;
     background: #5499F8;
+    position: sticky;
 }
 
 header .container1080 {
@@ -86,6 +85,19 @@ header .container1080 button {
     line-height: 19px;
     letter-spacing: 2.2px;
     -webkit-text-stroke: 1.5px var(--azul-oscuro);
+}
+
+.mini-logo{
+    width: 133px;
+    height: 68px;
+    margin:auto;
+    opacity: 0;
+}
+
+.mini-logo img{
+    width: 100%;
+    height: 100%;
+    margin-left: 50px;
 }
 
 .menu-hamb {
@@ -179,7 +191,7 @@ header .container1080 button {
     background-size: cover;
     /* Ajuste para cubrir toda la pantalla */
     /* background-attachment: fixed;  Fija el fondo mientras se desplaza la página */
-    margin-top: -70px;
+    margin-top: -10px;
     perspective-origin: 0 0;
 }
 
@@ -189,6 +201,7 @@ header .container1080 button {
     height: 301px;
     top: -48px;
     left: 25%;
+    margin-top: 30px;
 
 }
 

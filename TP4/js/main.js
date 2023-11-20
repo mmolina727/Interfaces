@@ -12,11 +12,17 @@ let img1= document.getElementById("image1");
 let img2= document.getElementById("image2");
 let img3= document.getElementById("image3");
 let duende= document.getElementById("duende");
+let title= document.getElementById("title");
+let logo= document.getElementById("title-logo");
 
 
 
 window.addEventListener("scroll",()=>{
   let scrol= document.documentElement.scrollTop;
+  title.style.transform="scale("+(1-(scrol*0.028))+")";
+  title.style.top=scrol*(-3.1)+"px";
+  title.style.opacity=1-(scrol*0.025);
+  logo.style.opacity=0+(scrol*0.023);;
   edifDer.style.left=(scrol-1400)*0.09+"px";
   edifIzq.style.right=(scrol-1400)*0.09+"px";
   edifFrente.style.bottom=(scrol-900)*0.09+"px";
@@ -33,6 +39,7 @@ window.addEventListener("scroll",()=>{
   if(scrol>2300){
     img3.style.left=(scrol-1850)*0.13+"px";
   }
+  console.log(scrol);
 });
 
 burger.addEventListener("click",()=>{
@@ -106,7 +113,6 @@ document.addEventListener("scroll", () => {
   }
 
   const scrollS6 = window.scrollY; // guarda el valor del desplazamiento vertical actual de la ventana
-console.log(scrollS6);
   if (scrollS6 < 4030) {
     clean();
     document.querySelector("#img-sec6-1").classList.add("show-img");
