@@ -587,10 +587,30 @@ header .container1080 button {
 /*======== Seccion 7 ========*/
 .section7{
     height: 719.861px;
-    background-image: url(../img/seccion7/Rectangle10.png);
     padding-bottom: 67px;
+    background-size: 100% 800px;
+    background-repeat: no-repeat;
     position: relative;
 }
+
+.comun{
+    background-image: url(../img/seccion7/Rectangle10.png);
+}
+
+.fondo-pink{
+    background-image: url(../img/seccion7/Group-pink.png);
+}
+
+.fondo-blueDark{
+    background-image: url(../img/seccion7/Component.png);
+}
+
+.fondo-blue{
+    background-image: url(../img/seccion7/Group-blue.png);
+    background-repeat: no-repeat;
+    background-size: 100% 800px;
+}
+
 .section7 .container1080{
     position: relative;
 }

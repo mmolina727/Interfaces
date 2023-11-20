@@ -15,8 +15,10 @@ let duende= document.getElementById("duende");
 let title= document.getElementById("title");
 let logo= document.getElementById("title-logo");
 let header= document.getElementById("header");
-
-
+let gwenSpider= document.getElementById("gwenSpider");
+let parkerSpider= document.getElementById("parkerSpider");
+let milesSpider= document.getElementById("milesSpider");
+let sect7= document.getElementById("sect7");
 
 
 window.addEventListener("scroll",()=>{
@@ -41,7 +43,6 @@ window.addEventListener("scroll",()=>{
   if(scrol>2300){
     img3.style.left=(scrol-1850)*0.13+"px";
   }
-  console.log(scrol);
 });
 
 burger.addEventListener("click",()=>{
@@ -54,6 +55,51 @@ burger.addEventListener("click",()=>{
         menu.classList.add('desplegar');
         burger.src='./img/menu-hamb.png'
     }
+});
+
+parkerSpider.addEventListener("mouseover",()=>{
+  sect7.classList.remove("comun");
+  sect7.classList.remove("fondo-blueDark");
+  sect7.classList.add("fondo-blue");
+  parkerSpider.style.transform="scale(1.0)";
+  parkerSpider.style.transition="all 0.2s";
+  parkerSpider.style.filter="blur(0px)";
+  gwenSpider.style.transform="scale(0.6)";
+  gwenSpider.style.filter="blur(5px)";
+  gwenSpider.style.transition="all 0.2s";
+  milesSpider.style.transform="scale(0.6)";
+  milesSpider.style.filter="blur(5px)";
+  milesSpider.style.transition="all 0.2s";
+});
+
+gwenSpider.addEventListener("mouseover",()=>{
+  sect7.classList.remove("fondo-blue");
+  sect7.classList.remove("fondo-blueDark");
+  sect7.classList.add("fondo-pink");
+  gwenSpider.style.transform="scale(1.0)";
+  gwenSpider.style.transition="all 0.2s";
+  gwenSpider.style.filter="blur(0px)";
+  parkerSpider.style.transform="scale(0.6)";
+  parkerSpider.style.filter="blur(5px)";
+  parkerSpider.style.transition="all 0.2s";
+  milesSpider.style.transform="scale(0.6)";
+  milesSpider.style.filter="blur(5px)";
+  milesSpider.style.transition="all 0.2s";
+});
+
+milesSpider.addEventListener("mouseover",()=>{
+  sect7.classList.remove("fondo-pink");
+  sect7.classList.remove("fondo-blue");
+  sect7.classList.add("fondo-blueDark");
+  milesSpider.style.transform="scale(1.0)";
+  milesSpider.style.transition="all 0.2s";
+  milesSpider.style.filter="blur(0px)";
+  parkerSpider.style.transform="scale(0.6)";
+  parkerSpider.style.filter="blur(5px)";
+  parkerSpider.style.transition="all 0.2s";
+  gwenSpider.style.transform="scale(0.6)";
+  gwenSpider.style.filter="blur(5px)";
+  gwenSpider.style.transition="all 0.2s";
 });
 
 /*====================================*/
