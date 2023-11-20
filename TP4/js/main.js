@@ -91,3 +91,37 @@ function showItemsWithDelay() {
       });
   }
 })();
+
+/*****************************************/
+/***seccion 6***/
+
+document.addEventListener("scroll", () => {
+  function clean() {
+    document.querySelectorAll(".img-sec6").forEach((s) => {
+      s.classList.remove("show-img");
+    });
+    document.querySelectorAll(".seccion6-txt").forEach((s) => {
+      s.classList.remove("show-txt");
+    });
+  }
+
+  const scrollS6 = window.scrollY; // guarda el valor del desplazamiento vertical actual de la ventana
+console.log(scrollS6);
+  if (scrollS6 < 4030) {
+    clean();
+    document.querySelector("#img-sec6-1").classList.add("show-img");
+    document.querySelector("#txt-1").classList.add("show-txt");
+  } else if (scrollS6 >= 4030 && scrollS6 < 4400) {
+    clean();
+    document.querySelector("#img-sec6-2").classList.add("show-img");
+    document.querySelector("#txt-2").classList.add("show-txt");
+  } else if (scrollS6 >= 4400 && scrollS6 < 5000) {
+    clean();
+    document.querySelector("#img-sec6-3").classList.add("show-img");
+    document.querySelector("#txt-3").classList.add("show-txt");
+  } else if (scrollS6 >= 5000) {
+    clean();
+    document.querySelector("#img-sec6-4").classList.add("show-img");
+    document.querySelector("#txt-4").classList.add("show-txt");
+  }
+});

@@ -469,26 +469,79 @@ header .container1080 button {
     margin-top: -50px;
     background-size: auto;
     background-repeat: no-repeat;
+   
+    margin-bottom: 70px;   
 }
-.section6 .container1080 h1{
+.centerS6 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+}
+.centerS6 h1{
     font-size: 60px;
     font-style: normal;
     font-weight: 600;
     line-height: 94.5%; /* 56.7px */
     padding-top: 240px;
 }
-.seccion6-contenedor{
+.row-s6 {
+    width: 100%;
+    height: 1650px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.col-img {
+    width: 552px;
+    height: 1650px;
+    /* background-color: #027e02; */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+.col-img2{
+    width: 100%;
+    height: 350px;
     position: sticky;
     display: flex;
-    padding-top: 60px;
-    padding-bottom: 25px;
+    align-items: center;
+    justify-content: center;
+    top: 35%;
 }
 .img-sec6{
-    position: sticky;
-    margin-right: 50px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+}
+.show-img{
+    z-index: 1;
+    opacity: 1;
+}
+.text-column{
+    position: relative;
+    left: 601px;
+    width: 467px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    box-sizing: border-box;
 }
 .seccion6-txt{
-    width: 467px;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /*define la separación entre  los elementos uno debajo del otro.*/
+    opacity: 0;
+    transition: all 0.2s ease-in;
+}
+.show-txt{
+    opacity: 1;
 }
 .seccion6-txt h3{
     font-size: 40px;
@@ -503,7 +556,6 @@ header .container1080 button {
     font-weight: 400;
     line-height: 94.5%; /* 18.9px */
 }
-
 /*======== mini seccion negra========*/
 .mini-seccion-negra h1{
     width: 816px;
