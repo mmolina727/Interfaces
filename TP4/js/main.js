@@ -14,24 +14,26 @@ let img3= document.getElementById("image3");
 let duende= document.getElementById("duende");
 let title= document.getElementById("title");
 let logo= document.getElementById("title-logo");
+let header= document.getElementById("header");
+
 
 
 
 window.addEventListener("scroll",()=>{
   let scrol= document.documentElement.scrollTop;
   title.style.transform="scale("+(1-(scrol*0.028))+")";
-  title.style.top=scrol*(-3.1)+"px";
+  title.style.top=-10-scrol+"%";
   title.style.opacity=1-(scrol*0.025);
   logo.style.opacity=0+(scrol*0.023);;
   edifDer.style.left=(scrol-1400)*0.09+"px";
   edifIzq.style.right=(scrol-1400)*0.09+"px";
   edifFrente.style.bottom=(scrol-900)*0.09+"px";
-  character1.style.top=(scrol+480)*0.20+"px";
-  character2.style.top=(scrol+630)*0.20+"px";
-  web1.style.top=(scrol+480)*0.20+"px";
-  character3.style.top=(scrol+450)*0.23+"px";
-  web2.style.top=(scrol+630)*0.23+"px";
-  duende.style.bottom=(scrol-300)*0.055+"px";
+  character1.style.top=(scrol+1180)*0.15+"px";
+  character2.style.top=(scrol+1330)*0.15+"px";
+  web1.style.top=(scrol+1180)*0.15+"px";
+  character3.style.top=(scrol+1150)*0.15+"px";
+  web2.style.top=(scrol+1400)*0.15+"px";
+  duende.style.bottom=(scrol-300)*0.075+"px";
   img1.style.left=(scrol-2300)*0.13+"px";
   if(scrol>2190){
     img2.style.left=(scrol-1950)*0.13+"px";
