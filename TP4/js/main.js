@@ -19,6 +19,8 @@ let gwenSpider= document.getElementById("gwenSpider");
 let parkerSpider= document.getElementById("parkerSpider");
 let milesSpider= document.getElementById("milesSpider");
 let sect7= document.getElementById("sect7");
+let cards= document.querySelectorAll(".img-container");
+let container3= document.getElementById("container");
 
 
 window.addEventListener("scroll",()=>{
@@ -42,6 +44,19 @@ window.addEventListener("scroll",()=>{
   }
   if(scrol>2300){
     img3.style.left=(scrol-1850)*0.13+"px";
+  }
+  if(scrol>1500){
+    container3.style.opacity=1;
+    for(let i=0; i<cards.length;i++){
+      cards[i].classList.add('fade');
+    }
+  }
+
+  if(scrol<1500){
+    for(let i=0; i<cards.length;i++){
+      cards[i].classList.remove('fade');
+      cards[i].style.opacity=0;
+    }
   }
 });
 

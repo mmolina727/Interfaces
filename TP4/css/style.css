@@ -25,17 +25,32 @@ No olvidar actualizar 'time' en el javascript */
     /*letra boton y sombra */
 }
 
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 
-/*========== BARRA DE NAVEGACION ==========*/
-/*#header.sticky{
-    position: sticky;
-    top: 0;  
-    background-color:linear-gradient(180deg, #5499F8 0%, #5499F8 67.91%, rgba(84, 153, 248, 0.00) 100%);
-    z-index: 1000;  
-    height: 103px;
-    transition: height 0.3s ease;
-}*/
+.fade{
+    animation: fadeIn 1s ease-out 0.1s forwards;
+}
 
+.fade:nth-child(1){
+    animation-delay:0.1s;
+}
+
+.fade:nth-child(2){
+    animation-delay: 0.3s;
+}
+
+.fade:nth-child(3){
+    animation-delay: 0.5s;
+}
 
 header {
     height: 80px;
@@ -355,6 +370,7 @@ header .container1080 button {
     padding-top: 390px;   
     display: flex;
     justify-content: space-between;
+    opacity:0;
 }
 
 .container3 img {
@@ -375,6 +391,7 @@ header .container1080 button {
 .img-container {
     flex: 1;    /* Distribuye el espacio de manera equitativa entre las imágenes */
     max-width: 30%;
+    opacity:0;
 }
 
 .img-container img {
