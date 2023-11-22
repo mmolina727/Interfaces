@@ -21,6 +21,13 @@ let milesSpider= document.getElementById("milesSpider");
 let sect7= document.getElementById("sect7");
 let cards= document.querySelectorAll(".img-container");
 let container3= document.getElementById("container");
+let cardParker= document.getElementById("card-peterParker");
+let cardGwen= document.getElementById("card-gwenStacy");
+let cardMiles= document.getElementById("card-milesMorales");
+let closeParker= document.getElementById("closeParker");
+let closeGwen= document.getElementById("closeGwen");
+let closeMiles= document.getElementById("closeMiles");
+
 
 
 window.addEventListener("scroll",()=>{
@@ -70,6 +77,31 @@ burger.addEventListener("click",()=>{
         menu.classList.add('desplegar');
         burger.src='./img/menu-hamb.png'
     }
+});
+
+parkerSpider.addEventListener("click",()=>{
+  cardParker.style.visibility="visible";
+});
+
+milesSpider.addEventListener("click",()=>{
+  cardMiles.style.visibility="visible";
+});
+
+gwenSpider.addEventListener("click",()=>{
+  cardGwen.style.visibility="visible";
+});
+
+closeParker.addEventListener("click",(e)=>{
+    cardParker.style.visibility="hidden";
+});
+
+closeGwen.addEventListener("click",(e)=>{
+  cardGwen.style.visibility="hidden";
+
+});
+
+closeMiles.addEventListener("click",(e)=>{
+  cardMiles.style.visibility="hidden";
 });
 
 parkerSpider.addEventListener("mouseover",()=>{

@@ -638,12 +638,15 @@ header .container1080 button {
 }
 .section7 .gwenStacy{
     margin-left: 10%;
+    cursor: pointer;
 }
 .section7 .peterParker{
     margin-left: 30%;
+    cursor: pointer;
 }
 .section7 .milesMorales{
  margin-left: 65%;
+ cursor: pointer;
 }
 /*========= cards ==========*/
 .card-seccion7{
@@ -653,7 +656,7 @@ header .container1080 button {
     background-color: rgb(15, 15, 15);
     position: absolute;
     align-items: center;
-    
+    visibility: hidden;
     display: flex;
 }
 
