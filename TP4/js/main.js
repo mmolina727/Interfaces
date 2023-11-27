@@ -52,14 +52,14 @@ window.addEventListener("scroll",()=>{
   if(scrol>2300){
     img3.style.left=(scrol-1850)*0.13+"px";
   }
-  if(scrol>1500){
+  if(scrol>1300){
     container3.style.opacity=1;
     for(let i=0; i<cards.length;i++){
       cards[i].classList.add('fade');
     }
   }
 
-  if(scrol<1500){
+  if(scrol<1300){
     for(let i=0; i<cards.length;i++){
       cards[i].classList.remove('fade');
       cards[i].style.opacity=0;
